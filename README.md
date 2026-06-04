@@ -28,6 +28,7 @@ You only do this once. ~10 minutes.
 - **Claude Code** — installed and logged in on this machine. The bridge reuses your Claude credentials so you don't need to manage API keys.
   - Install: https://docs.anthropic.com/claude-code
   - Then run `claude login` once.
+- **Figma Desktop Bridge plugin (`figma-console-mcp`)** — the WebSocket bridge that lets AI tools read/write to Figma. Install from https://github.com/southleft/figma-console-mcp (follow the README there). Poseidon talks to Figma through it. Once installed, open it in Figma Desktop (Plugins → Development → Figma Desktop Bridge) and leave it running.
 - The Hydrogen DS file must be **added to your Figma file's libraries** (Assets panel → Libraries → enable `Hydrogen Design System 2023 (Desktop)`).
 
 ### 1. Clone
@@ -97,8 +98,9 @@ curl http://127.0.0.1:9334/ping
 ## Daily flow (after first-time setup)
 
 1. Open Figma Desktop on your design file.
-2. In a terminal: `pnpm bridge:dev`.
-3. Figma → **Plugins → Development → Poseidon** → chat.
+2. In Figma: **Plugins → Development → Figma Desktop Bridge** — keep its window open in the background.
+3. In a terminal: `pnpm bridge:dev`.
+4. Figma → **Plugins → Development → Poseidon** → chat.
 
 That's it.
 
@@ -125,6 +127,7 @@ Full catalog with `Use when` / `Don't use when` per variant: see the `docs/desig
 | Symptom | Likely cause | Fix |
 |---|---|---|
 | Plugin shows red bridge status | Bridge not running | Re-run `pnpm bridge:dev` |
+| Plugin can't see / reach Figma | Figma Desktop Bridge plugin not open | Plugins → Development → Figma Desktop Bridge (install from https://github.com/southleft/figma-console-mcp if missing) |
 | Plugin shows red Claude status | Not logged in to Claude Code | `claude login` in terminal |
 | "Hydrogen DS not subscribed" | Library not enabled on this file | Assets panel → Libraries → enable `Hydrogen Design System 2023 (Desktop)` |
 | Plugin doesn't appear in menu | Manifest not imported | Re-do step 4 |
