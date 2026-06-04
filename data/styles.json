@@ -1,0 +1,630 @@
+{
+  "scannedAt": "2026-05-19T12:00:00.000Z",
+  "fileKey": "XySDEos09rLrBZTxVWZHXS",
+  "fileName": "🖼🖼 Hydrogen Design System 2023 (Desktop)",
+  "textCount": 52,
+  "paintCount": 4,
+  "effectCount": 12,
+  "textStyles": [
+    {
+      "id": "S:3eadaccb243d820a550454ccab38be8524f1d6e0,",
+      "key": "3eadaccb243d820a550454ccab38be8524f1d6e0",
+      "name": "Display 2xl/Regular",
+      "fontFamily": "Mail Sans Roman",
+      "fontStyle": "Regular",
+      "fontSize": 72,
+      "lineHeightPx": 90,
+      "letterSpacingPct": -2
+    },
+    {
+      "id": "S:bdb5164d6af8fc465434a1e950631f4a7f69fc3e,",
+      "key": "bdb5164d6af8fc465434a1e950631f4a7f69fc3e",
+      "name": "Display 2xl/Medium",
+      "fontFamily": "Mail Sans Roman",
+      "fontStyle": "Medium",
+      "fontSize": 72,
+      "lineHeightPx": 90,
+      "letterSpacingPct": -2
+    },
+    {
+      "id": "S:a3d7c62953823d198d1f966eaf295bd8e322ca7f,",
+      "key": "a3d7c62953823d198d1f966eaf295bd8e322ca7f",
+      "name": "Display 2xl/Semibold",
+      "fontFamily": "Mail Sans Roman",
+      "fontStyle": "DemiBold",
+      "fontSize": 72,
+      "lineHeightPx": 90,
+      "letterSpacingPct": -2
+    },
+    {
+      "id": "S:3429b7b53c9872c67d731fc565faa39e62a021fc,",
+      "key": "3429b7b53c9872c67d731fc565faa39e62a021fc",
+      "name": "Display 2xl/Bold",
+      "fontFamily": "Mail Sans Roman",
+      "fontStyle": "Bold",
+      "fontSize": 72,
+      "lineHeightPx": 90,
+      "letterSpacingPct": -2
+    },
+    {
+      "id": "S:b6117f70396b3140d1849f65f7e8bc1e29a652fd,",
+      "key": "b6117f70396b3140d1849f65f7e8bc1e29a652fd",
+      "name": "Display xl/Regular",
+      "fontFamily": "Mail Sans Roman",
+      "fontStyle": "Regular",
+      "fontSize": 60,
+      "lineHeightPx": 72,
+      "letterSpacingPct": -2
+    },
+    {
+      "id": "S:6aa341440f2d1c96ac53fce7a7fcaa331ab6280a,",
+      "key": "6aa341440f2d1c96ac53fce7a7fcaa331ab6280a",
+      "name": "Display xl/Medium",
+      "fontFamily": "Mail Sans Roman",
+      "fontStyle": "Medium",
+      "fontSize": 60,
+      "lineHeightPx": 72,
+      "letterSpacingPct": -2
+    },
+    {
+      "id": "S:bab2a56047aabffae13526a1990d1d140fb8df72,",
+      "key": "bab2a56047aabffae13526a1990d1d140fb8df72",
+      "name": "Display xl/Semibold",
+      "fontFamily": "Mail Sans Roman",
+      "fontStyle": "DemiBold",
+      "fontSize": 60,
+      "lineHeightPx": 72,
+      "letterSpacingPct": -2
+    },
+    {
+      "id": "S:a414109eb814defdb3929474267602f07bf267d2,",
+      "key": "a414109eb814defdb3929474267602f07bf267d2",
+      "name": "Display xl/Bold",
+      "fontFamily": "Mail Sans Roman",
+      "fontStyle": "Bold",
+      "fontSize": 60,
+      "lineHeightPx": 72,
+      "letterSpacingPct": -2
+    },
+    {
+      "id": "S:7705b69bec6b34f7751982e8c62899b571d191ac,",
+      "key": "7705b69bec6b34f7751982e8c62899b571d191ac",
+      "name": "Display lg/Regular",
+      "fontFamily": "Mail Sans Roman",
+      "fontStyle": "Regular",
+      "fontSize": 48,
+      "lineHeightPx": 60,
+      "letterSpacingPct": -2
+    },
+    {
+      "id": "S:db453c042ab52148152cffa5e3866d9dc195d7d9,",
+      "key": "db453c042ab52148152cffa5e3866d9dc195d7d9",
+      "name": "Display lg/Medium",
+      "fontFamily": "Mail Sans Roman",
+      "fontStyle": "Medium",
+      "fontSize": 48,
+      "lineHeightPx": 60,
+      "letterSpacingPct": -2
+    },
+    {
+      "id": "S:affc88f009418076bd622de58700871d1e79ea1f,",
+      "key": "affc88f009418076bd622de58700871d1e79ea1f",
+      "name": "Display lg/Semibold",
+      "fontFamily": "Mail Sans Roman",
+      "fontStyle": "DemiBold",
+      "fontSize": 48,
+      "lineHeightPx": 60,
+      "letterSpacingPct": -2
+    },
+    {
+      "id": "S:6ebc142de1ffd006819f35f56860c5d9f5479f39,",
+      "key": "6ebc142de1ffd006819f35f56860c5d9f5479f39",
+      "name": "Display lg/Bold",
+      "fontFamily": "Mail Sans Roman",
+      "fontStyle": "Bold",
+      "fontSize": 48,
+      "lineHeightPx": 60,
+      "letterSpacingPct": -2
+    },
+    {
+      "id": "S:819af7fe39f3e874014ef0a9ca0ed863fcaa04f3,",
+      "key": "819af7fe39f3e874014ef0a9ca0ed863fcaa04f3",
+      "name": "Display md/Regular",
+      "fontFamily": "Mail Sans Roman",
+      "fontStyle": "Regular",
+      "fontSize": 36,
+      "lineHeightPx": 44,
+      "letterSpacingPct": -2
+    },
+    {
+      "id": "S:10cf09835fb52a80a8fb9b29eef8bdd6a55a84c1,",
+      "key": "10cf09835fb52a80a8fb9b29eef8bdd6a55a84c1",
+      "name": "Display md/Medium",
+      "fontFamily": "Mail Sans Roman",
+      "fontStyle": "Medium",
+      "fontSize": 36,
+      "lineHeightPx": 44,
+      "letterSpacingPct": -2
+    },
+    {
+      "id": "S:d9020f2581a9fd58aa103404f4cf6730ffa67b66,",
+      "key": "d9020f2581a9fd58aa103404f4cf6730ffa67b66",
+      "name": "Display md/Semibold",
+      "fontFamily": "Mail Sans Roman",
+      "fontStyle": "DemiBold",
+      "fontSize": 36,
+      "lineHeightPx": 44,
+      "letterSpacingPct": -2
+    },
+    {
+      "id": "S:48509661ab48c4f2de2a274da6795472c3a3f5b0,",
+      "key": "48509661ab48c4f2de2a274da6795472c3a3f5b0",
+      "name": "Display md/Bold",
+      "fontFamily": "Mail Sans Roman",
+      "fontStyle": "Bold",
+      "fontSize": 36,
+      "lineHeightPx": 44,
+      "letterSpacingPct": -2
+    },
+    {
+      "id": "S:56e7e680b3e171053a732ed0a6b2ee1f8663fb4d,",
+      "key": "56e7e680b3e171053a732ed0a6b2ee1f8663fb4d",
+      "name": "Display sm/Regular",
+      "fontFamily": "Mail Sans Roman",
+      "fontStyle": "Regular",
+      "fontSize": 30,
+      "lineHeightPx": 38,
+      "letterSpacingPct": -2
+    },
+    {
+      "id": "S:7572f98d3995e5df351a28deb3f9c04c6ef161c1,",
+      "key": "7572f98d3995e5df351a28deb3f9c04c6ef161c1",
+      "name": "Display sm/Medium",
+      "fontFamily": "Mail Sans Roman",
+      "fontStyle": "Medium",
+      "fontSize": 30,
+      "lineHeightPx": 38,
+      "letterSpacingPct": -2
+    },
+    {
+      "id": "S:6fb0b295ba7b5acb3cc8ea6c91b96f8e29037d37,",
+      "key": "6fb0b295ba7b5acb3cc8ea6c91b96f8e29037d37",
+      "name": "Display sm/Semibold",
+      "fontFamily": "Mail Sans Roman",
+      "fontStyle": "DemiBold",
+      "fontSize": 30,
+      "lineHeightPx": 38,
+      "letterSpacingPct": -2
+    },
+    {
+      "id": "S:f244debf235639ac0957b7e7dd70e024d1750f29,",
+      "key": "f244debf235639ac0957b7e7dd70e024d1750f29",
+      "name": "Display sm/Bold",
+      "fontFamily": "Mail Sans Roman",
+      "fontStyle": "Bold",
+      "fontSize": 30,
+      "lineHeightPx": 38,
+      "letterSpacingPct": -2
+    },
+    {
+      "id": "S:d0ea5f5a35a3fb7a25f9cd0e20704e375b94be35,",
+      "key": "d0ea5f5a35a3fb7a25f9cd0e20704e375b94be35",
+      "name": "Display xs/Regular",
+      "fontFamily": "Mail Sans Roman",
+      "fontStyle": "Regular",
+      "fontSize": 24,
+      "lineHeightPx": 32,
+      "letterSpacingPct": -2
+    },
+    {
+      "id": "S:d48e7b92338cf4c4dbb897d1cb1b50dee3063b08,",
+      "key": "d48e7b92338cf4c4dbb897d1cb1b50dee3063b08",
+      "name": "Display xs/Medium",
+      "fontFamily": "Mail Sans Roman",
+      "fontStyle": "Medium",
+      "fontSize": 24,
+      "lineHeightPx": 32,
+      "letterSpacingPct": -2
+    },
+    {
+      "id": "S:2b898e9d4955b34ee3f9de099a844b501ed80dcb,",
+      "key": "2b898e9d4955b34ee3f9de099a844b501ed80dcb",
+      "name": "Display xs/Semibold",
+      "fontFamily": "Mail Sans Roman",
+      "fontStyle": "DemiBold",
+      "fontSize": 24,
+      "lineHeightPx": 32,
+      "letterSpacingPct": -2
+    },
+    {
+      "id": "S:c7f355f9a04968f961fc0cb46aecd6fa46af68a7,",
+      "key": "c7f355f9a04968f961fc0cb46aecd6fa46af68a7",
+      "name": "Display xs/Bold",
+      "fontFamily": "Mail Sans Roman",
+      "fontStyle": "Bold",
+      "fontSize": 24,
+      "lineHeightPx": 32,
+      "letterSpacingPct": -2
+    },
+    {
+      "id": "S:ba81098187a370e093fe94fe79b9dd849498b46a,",
+      "key": "ba81098187a370e093fe94fe79b9dd849498b46a",
+      "name": "Text xl/Regular",
+      "fontFamily": "Mail Sans Roman",
+      "fontStyle": "Regular",
+      "fontSize": 20,
+      "lineHeightPx": 24,
+      "letterSpacingPct": -2
+    },
+    {
+      "id": "S:c6fd5f7a2fb6cbd6f76975d51b514f4c50c4028e,",
+      "key": "c6fd5f7a2fb6cbd6f76975d51b514f4c50c4028e",
+      "name": "Text xl/Medium",
+      "fontFamily": "Mail Sans Roman",
+      "fontStyle": "Medium",
+      "fontSize": 20,
+      "lineHeightPx": 24,
+      "letterSpacingPct": -2
+    },
+    {
+      "id": "S:db612beb19d49da503e61e69eac80c68cfd90493,",
+      "key": "db612beb19d49da503e61e69eac80c68cfd90493",
+      "name": "Text xl/Semibold",
+      "fontFamily": "Mail Sans Roman",
+      "fontStyle": "DemiBold",
+      "fontSize": 20,
+      "lineHeightPx": 24,
+      "letterSpacingPct": -2
+    },
+    {
+      "id": "S:026a58ea23fd00dd77cb47c676c3bf530db9c7d3,",
+      "key": "026a58ea23fd00dd77cb47c676c3bf530db9c7d3",
+      "name": "Text xl/Bold",
+      "fontFamily": "Mail Sans Roman",
+      "fontStyle": "Bold",
+      "fontSize": 20,
+      "lineHeightPx": 24,
+      "letterSpacingPct": -2
+    },
+    {
+      "id": "S:62e46ea289ee27c903b6d207380211df7d2d48b0,",
+      "key": "62e46ea289ee27c903b6d207380211df7d2d48b0",
+      "name": "Text lg/Regular",
+      "fontFamily": "Mail Sans Roman",
+      "fontStyle": "Regular",
+      "fontSize": 18,
+      "lineHeightPx": 24,
+      "letterSpacingPct": -2
+    },
+    {
+      "id": "S:6fcebeb76331facdf3157b1821e3121f0355cbd8,",
+      "key": "6fcebeb76331facdf3157b1821e3121f0355cbd8",
+      "name": "Text lg/Medium",
+      "fontFamily": "Mail Sans Roman",
+      "fontStyle": "Medium",
+      "fontSize": 18,
+      "lineHeightPx": 24,
+      "letterSpacingPct": -2
+    },
+    {
+      "id": "S:7057aa7b9f85da147d03821344a0b5dec949ac58,",
+      "key": "7057aa7b9f85da147d03821344a0b5dec949ac58",
+      "name": "Text lg/Semibold",
+      "fontFamily": "Mail Sans Roman",
+      "fontStyle": "DemiBold",
+      "fontSize": 18,
+      "lineHeightPx": 24,
+      "letterSpacingPct": -2
+    },
+    {
+      "id": "S:fb34260307717970b180ff49c8542193981f3deb,",
+      "key": "fb34260307717970b180ff49c8542193981f3deb",
+      "name": "Text lg/Bold",
+      "fontFamily": "Mail Sans Roman",
+      "fontStyle": "Bold",
+      "fontSize": 18,
+      "lineHeightPx": 24,
+      "letterSpacingPct": -2
+    },
+    {
+      "id": "S:7297216a79343561831a449720dd6fdf05049a7a,",
+      "key": "7297216a79343561831a449720dd6fdf05049a7a",
+      "name": "Text md/Regular",
+      "fontFamily": "Mail Sans Roman",
+      "fontStyle": "Regular",
+      "fontSize": 16,
+      "lineHeightPx": 24,
+      "letterSpacingPct": -2
+    },
+    {
+      "id": "S:afb51b2cf7ed8f703d64ea41a1f51a5be9d5acbb,",
+      "key": "afb51b2cf7ed8f703d64ea41a1f51a5be9d5acbb",
+      "name": "Text md/Medium",
+      "fontFamily": "Mail Sans Roman",
+      "fontStyle": "Medium",
+      "fontSize": 16,
+      "lineHeightPx": 24,
+      "letterSpacingPct": -2
+    },
+    {
+      "id": "S:616b6bd024901bde1e156497e9f1e7f8424d2dbd,",
+      "key": "616b6bd024901bde1e156497e9f1e7f8424d2dbd",
+      "name": "Text md/Semibold",
+      "fontFamily": "Mail Sans Roman",
+      "fontStyle": "DemiBold",
+      "fontSize": 16,
+      "lineHeightPx": 24,
+      "letterSpacingPct": -2
+    },
+    {
+      "id": "S:bca79042ddcba85b6325045bbe71902288c5e618,",
+      "key": "bca79042ddcba85b6325045bbe71902288c5e618",
+      "name": "Text md/Bold",
+      "fontFamily": "Mail Sans Roman",
+      "fontStyle": "Bold",
+      "fontSize": 16,
+      "lineHeightPx": 24,
+      "letterSpacingPct": -2
+    },
+    {
+      "id": "S:9df5e446e04be7e037d61da4ea5864cbd2e8634a,",
+      "key": "9df5e446e04be7e037d61da4ea5864cbd2e8634a",
+      "name": "Text small/Regular",
+      "fontFamily": "Mail Sans Roman",
+      "fontStyle": "Regular",
+      "fontSize": 14,
+      "lineHeightPx": 20,
+      "letterSpacingPct": -2
+    },
+    {
+      "id": "S:9af1deb17349c0837f2d889833bd08c97a9e36ca,",
+      "key": "9af1deb17349c0837f2d889833bd08c97a9e36ca",
+      "name": "Text small/Medium",
+      "fontFamily": "Mail Sans Roman",
+      "fontStyle": "Medium",
+      "fontSize": 14,
+      "lineHeightPx": 20,
+      "letterSpacingPct": -2
+    },
+    {
+      "id": "S:510df438cacd7a6ae66116e8e71d374c199df550,",
+      "key": "510df438cacd7a6ae66116e8e71d374c199df550",
+      "name": "Text small/Semibold",
+      "fontFamily": "Mail Sans Roman",
+      "fontStyle": "DemiBold",
+      "fontSize": 14,
+      "lineHeightPx": 20,
+      "letterSpacingPct": -2
+    },
+    {
+      "id": "S:eb38db1418c947f74f8cd67858c71d01d7775fff,",
+      "key": "eb38db1418c947f74f8cd67858c71d01d7775fff",
+      "name": "Text small/Bold",
+      "fontFamily": "Mail Sans Roman",
+      "fontStyle": "Bold",
+      "fontSize": 14,
+      "lineHeightPx": 20,
+      "letterSpacingPct": -2
+    },
+    {
+      "id": "S:6d9928b486faad54c62253ce194e8e9e08c17b35,",
+      "key": "6d9928b486faad54c62253ce194e8e9e08c17b35",
+      "name": "Text xs/Regular",
+      "fontFamily": "Mail Sans Roman",
+      "fontStyle": "Regular",
+      "fontSize": 12,
+      "lineHeightPx": 16,
+      "letterSpacingPct": -2
+    },
+    {
+      "id": "S:3d3fcd6349d3cb0ff9e6bee0644ab39c7dcc67fe,",
+      "key": "3d3fcd6349d3cb0ff9e6bee0644ab39c7dcc67fe",
+      "name": "Text xs/Medium",
+      "fontFamily": "Mail Sans Roman",
+      "fontStyle": "Medium",
+      "fontSize": 12,
+      "lineHeightPx": 16,
+      "letterSpacingPct": -2
+    },
+    {
+      "id": "S:919f345d4053d711d5ff31e12b502d24be7ea90b,",
+      "key": "919f345d4053d711d5ff31e12b502d24be7ea90b",
+      "name": "Text xs/Semibold",
+      "fontFamily": "Mail Sans Roman",
+      "fontStyle": "DemiBold",
+      "fontSize": 12,
+      "lineHeightPx": 16,
+      "letterSpacingPct": -2
+    },
+    {
+      "id": "S:89ca42b141bb48821f4c21b84d0dc73c34b73207,",
+      "key": "89ca42b141bb48821f4c21b84d0dc73c34b73207",
+      "name": "Text xs/Bold",
+      "fontFamily": "Mail Sans Roman",
+      "fontStyle": "Bold",
+      "fontSize": 12,
+      "lineHeightPx": 16,
+      "letterSpacingPct": -2
+    },
+    {
+      "id": "S:bab009bbbc021da929745c3a394a95abf405e8b1,",
+      "key": "bab009bbbc021da929745c3a394a95abf405e8b1",
+      "name": "Text ms/Regular",
+      "fontFamily": "Mail Sans Roman",
+      "fontStyle": "Regular",
+      "fontSize": 10,
+      "lineHeightPx": 14,
+      "letterSpacingPct": 0
+    },
+    {
+      "id": "S:92f67593a92a31116d455a08fcef3efcd80a2fb9,",
+      "key": "92f67593a92a31116d455a08fcef3efcd80a2fb9",
+      "name": "Text ms/Medium",
+      "fontFamily": "Mail Sans Roman",
+      "fontStyle": "Medium",
+      "fontSize": 10,
+      "lineHeightPx": 14,
+      "letterSpacingPct": 0
+    },
+    {
+      "id": "S:b96948db93c706551f690ab0c9adab2231f957b7,",
+      "key": "b96948db93c706551f690ab0c9adab2231f957b7",
+      "name": "Text ms/Semibold",
+      "fontFamily": "Mail Sans Roman",
+      "fontStyle": "DemiBold",
+      "fontSize": 10,
+      "lineHeightPx": 14,
+      "letterSpacingPct": 0
+    },
+    {
+      "id": "S:3c79eb5e8600d21ead0d18850194d9dec7d0ab36,",
+      "key": "3c79eb5e8600d21ead0d18850194d9dec7d0ab36",
+      "name": "Text ms/Bold",
+      "fontFamily": "Mail Sans Roman",
+      "fontStyle": "Bold",
+      "fontSize": 10,
+      "lineHeightPx": 14,
+      "letterSpacingPct": 0
+    },
+    {
+      "id": "S:7f3dfc4851a14e9bbefcbb86490f400045498dad,",
+      "key": "7f3dfc4851a14e9bbefcbb86490f400045498dad",
+      "name": "Text s/Regular",
+      "fontFamily": "Mail Sans Roman",
+      "fontStyle": "Regular",
+      "fontSize": 8,
+      "lineHeightPx": 12,
+      "letterSpacingPct": 0
+    },
+    {
+      "id": "S:7293cde21417fd46bd3ff11388235478264636bc,",
+      "key": "7293cde21417fd46bd3ff11388235478264636bc",
+      "name": "Text s/Medium",
+      "fontFamily": "Mail Sans Roman",
+      "fontStyle": "Medium",
+      "fontSize": 8,
+      "lineHeightPx": 12,
+      "letterSpacingPct": 0
+    },
+    {
+      "id": "S:bf23caa6afc7e31c8bd50d5e43081b1590cdfba2,",
+      "key": "bf23caa6afc7e31c8bd50d5e43081b1590cdfba2",
+      "name": "Text s/Semibold",
+      "fontFamily": "Mail Sans Roman",
+      "fontStyle": "DemiBold",
+      "fontSize": 8,
+      "lineHeightPx": 12,
+      "letterSpacingPct": 0
+    },
+    {
+      "id": "S:f1277eecaa8ea408b674fcb18c5bf82740496339,",
+      "key": "f1277eecaa8ea408b674fcb18c5bf82740496339",
+      "name": "Text s/Bold",
+      "fontFamily": "Mail Sans Roman",
+      "fontStyle": "Bold",
+      "fontSize": 8,
+      "lineHeightPx": 12,
+      "letterSpacingPct": 0
+    }
+  ],
+  "paintStyles": [
+    {
+      "id": "S:3e513bdcb75bd28a9fcf7ed1121ebaec35faff45,",
+      "key": "3e513bdcb75bd28a9fcf7ed1121ebaec35faff45",
+      "name": "Gradient/Linear Black",
+      "kind": "GRADIENT_LINEAR"
+    },
+    {
+      "id": "S:b7690d0843c0e492f470668129e5956e500be542,",
+      "key": "b7690d0843c0e492f470668129e5956e500be542",
+      "name": "Gradient/Black to clear - Ver",
+      "kind": "GRADIENT_LINEAR"
+    },
+    {
+      "id": "S:fad0a1046d66d871255588c6c51c695c118977d5,",
+      "key": "fad0a1046d66d871255588c6c51c695c118977d5",
+      "name": "Gradient/Black to clear - Hor",
+      "kind": "GRADIENT_LINEAR"
+    },
+    {
+      "id": "S:e284684314dccc7815366d0a43a22c3d7089380f,",
+      "key": "e284684314dccc7815366d0a43a22c3d7089380f",
+      "name": "Gradient/Light to clear - Ver",
+      "kind": "GRADIENT_LINEAR"
+    }
+  ],
+  "effectStyles": [
+    {
+      "id": "S:be3af2168b8ec1da7d695171a4cd90e8b036fbdc,",
+      "key": "be3af2168b8ec1da7d695171a4cd90e8b036fbdc",
+      "name": "shadow-xsmall",
+      "effectCount": 1
+    },
+    {
+      "id": "S:c9d5d2bd158dfeb3d74c929220dec0b5e4c8e64c,",
+      "key": "c9d5d2bd158dfeb3d74c929220dec0b5e4c8e64c",
+      "name": "shadow-small",
+      "effectCount": 2
+    },
+    {
+      "id": "S:77841e05310006c10901c6f800288e1f82fa169e,",
+      "key": "77841e05310006c10901c6f800288e1f82fa169e",
+      "name": "shadow-medium",
+      "effectCount": 2
+    },
+    {
+      "id": "S:089730bf890a775f9d6c9d6aeed257c2013c031e,",
+      "key": "089730bf890a775f9d6c9d6aeed257c2013c031e",
+      "name": "shadow-large",
+      "effectCount": 2
+    },
+    {
+      "id": "S:1350b49a68a383d5e3733c2389cf3bc3fb36cbdf,",
+      "key": "1350b49a68a383d5e3733c2389cf3bc3fb36cbdf",
+      "name": "shadow-large",
+      "effectCount": 2
+    },
+    {
+      "id": "S:35058fdf793c2bd84baee6196297c5cfc14bfe66,",
+      "key": "35058fdf793c2bd84baee6196297c5cfc14bfe66",
+      "name": "shadow-xxlarge",
+      "effectCount": 1
+    },
+    {
+      "id": "S:cc1217667f9278ad2bc40c2f51c719fb524675c2,",
+      "key": "cc1217667f9278ad2bc40c2f51c719fb524675c2",
+      "name": "shadow-xxxlarge",
+      "effectCount": 1
+    },
+    {
+      "id": "S:f28a04a54711de7aa39d193dfeda2a6355ba4088,",
+      "key": "f28a04a54711de7aa39d193dfeda2a6355ba4088",
+      "name": "blur-small",
+      "effectCount": 1
+    },
+    {
+      "id": "S:1469bdef36fe318fbd8e9266e38ceaea11f7eee8,",
+      "key": "1469bdef36fe318fbd8e9266e38ceaea11f7eee8",
+      "name": "blur-medium",
+      "effectCount": 1
+    },
+    {
+      "id": "S:c38f3eb35fa7e847d0125f499022180c74500c93,",
+      "key": "c38f3eb35fa7e847d0125f499022180c74500c93",
+      "name": "blur-large",
+      "effectCount": 1
+    },
+    {
+      "id": "S:1e068e3f3e0c302d6ee093c231ef5f4ee7dc9cd5,",
+      "key": "1e068e3f3e0c302d6ee093c231ef5f4ee7dc9cd5",
+      "name": "blur-xlarge",
+      "effectCount": 1
+    },
+    {
+      "id": "S:c917b3fca5cefa3655e1b3d12269de62c20ab22b,",
+      "key": "c917b3fca5cefa3655e1b3d12269de62c20ab22b",
+      "name": "Shadow try",
+      "effectCount": 2
+    }
+  ]
+}

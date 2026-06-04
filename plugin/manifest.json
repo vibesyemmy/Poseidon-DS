@@ -1,0 +1,16 @@
+{
+  "name": "Poseidon — Hydrogen DS Copilot",
+  "id": "poseidon-hydrogen-ds",
+  "api": "1.0.0",
+  "main": "dist/sandbox.js",
+  "ui": "dist/ui.html",
+  "editorType": ["figma"],
+  "documentAccess": "dynamic-page",
+  "networkAccess": {
+    "allowedDomains": ["none"],
+    "devAllowedDomains": ["http://localhost:9334"],
+    "reasoning": "Connects to the local Poseidon bridge (Node + Claude Agent SDK) running on the user's machine. No third-party network access."
+  },
+  "capabilities": [],
+  "permissions": ["teamlibrary"]
+}

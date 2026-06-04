@@ -1,0 +1,26 @@
+{
+  "scannedAt": "2026-05-19T10:25:19.458Z",
+  "fileKey": "XySDEos09rLrBZTxVWZHXS",
+  "pageId": "13532:339653",
+  "templateCount": 18,
+  "templates": [
+    { "slug": "dashboard-with-kpis-and-table", "name": "Dashboard with KPIs and table", "nodeId": "13532:339654", "width": 1440, "height": 982, "category": "Dashboard", "description": "" },
+    { "slug": "list-page-with-tabs-and-table", "name": "List page with tabs and table", "nodeId": "13532:369949", "width": 1440, "height": 982, "category": "List", "description": "" },
+    { "slug": "bulk-upload-form", "name": "Bulk upload form", "nodeId": "13532:375939", "width": 1440, "height": 1024, "category": "Form", "description": "" },
+    { "slug": "detail-page-pending-state", "name": "Detail page · Pending state", "nodeId": "13532:376361", "width": 1440, "height": 1024, "category": "Detail", "description": "" },
+    { "slug": "detail-page-rejected-state", "name": "Detail page · Rejected state", "nodeId": "13532:376517", "width": 1440, "height": 1024, "category": "Detail", "description": "" },
+    { "slug": "simple-form-for-creating-new-items", "name": "Simple form for creating new items", "nodeId": "13532:377834", "width": 1440, "height": 1024, "category": "Form", "description": "" },
+    { "slug": "multi-section-form", "name": "Multi-section form", "nodeId": "13532:377881", "width": 1440, "height": 1024, "category": "Form", "description": "" },
+    { "slug": "form-with-grouped-sections", "name": "Form with grouped sections", "nodeId": "13532:378634", "width": 1440, "height": 1024, "category": "Form", "description": "" },
+    { "slug": "onboarding-login-form", "name": "Onboarding · Login form", "nodeId": "13532:379705", "width": 1440, "height": 900, "category": "Form", "description": "" },
+    { "slug": "onboarding-login-form-with-error-toast", "name": "Onboarding · Login form with error toast", "nodeId": "13532:379718", "width": 1440, "height": 900, "category": "Form", "description": "" },
+    { "slug": "onboarding-otp-verification", "name": "Onboarding · OTP verification", "nodeId": "13532:379732", "width": 1440, "height": 900, "category": "Onboarding", "description": "" },
+    { "slug": "detail-page-simple", "name": "Detail page (simple)", "nodeId": "13532:380909", "width": 1440, "height": 1024, "category": "Detail", "description": "" },
+    { "slug": "detail-page-with-tabs", "name": "Detail page with tabs", "nodeId": "13532:381107", "width": 1440, "height": 1024, "category": "Detail", "description": "" },
+    { "slug": "settings-configuration-page", "name": "Settings configuration page", "nodeId": "13532:381458", "width": 1440, "height": 1024, "category": "Other", "description": "" },
+    { "slug": "detail-page-with-confirmation-modal", "name": "Detail page with confirmation modal", "nodeId": "13532:385164", "width": 1440, "height": 1024, "category": "Detail", "description": "" },
+    { "slug": "settings-page-otp-protected-action", "name": "Settings page · OTP-protected action", "nodeId": "13538:45407", "width": 1440, "height": 1024, "category": "Other", "description": "" },
+    { "slug": "wizard-with-steps", "name": "Wizard with steps", "nodeId": "13538:45465", "width": 1440, "height": 1024, "category": "Form", "description": "" },
+    { "slug": "list-page-empty-state", "name": "List page · Empty state", "nodeId": "13539:51309", "width": 1440, "height": 982, "category": "List", "description": "" }
+  ]
+}

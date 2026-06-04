@@ -1,0 +1,21 @@
+{
+  "name": "@poseidon/plugin",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Poseidon — Hydrogen Design System copilot Figma plugin.",
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/build.mjs --watch",
+    "build": "node scripts/build.mjs",
+    "typecheck": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "preact": "^10.25.4"
+  },
+  "devDependencies": {
+    "@figma/plugin-typings": "^1.118.1",
+    "@types/node": "^22.10.2",
+    "esbuild": "^0.24.2",
+    "typescript": "^5.7.2"
+  }
+}

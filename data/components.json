@@ -1,0 +1,3197 @@
+{
+  "scannedAt": "2026-05-19T11:32:00.000Z",
+  "fileKey": "XySDEos09rLrBZTxVWZHXS",
+  "fileName": "🖼🖼 Hydrogen Design System 2023 (Desktop)",
+  "componentCount": 179,
+  "components": [
+    {
+      "key": "443560f08f252de32e15d909d4326a44163859d9",
+      "name": "_Badge base",
+      "category": "Badges",
+      "isVariantSet": true,
+      "variants": {
+        "Icon": [
+          "False",
+          "Dot",
+          "X close",
+          "Avatar",
+          "Icon right",
+          "Icon left",
+          "Only"
+        ]
+      },
+      "defaultVariantName": "Icon=False",
+      "defaultVariantKey": "67aba8c1e293f39d6e4a52c3962bee0c02f43456"
+    },
+    {
+      "key": "b0775df556fd1acc008b24fd26a52ca81aec973c",
+      "name": "Badge",
+      "category": "Badges",
+      "isVariantSet": true,
+      "variants": {
+        "Size": [
+          "sm",
+          "md",
+          "lg"
+        ],
+        "Icon": [
+          "False",
+          "Dot",
+          "X close",
+          "Avatar",
+          "Icon right",
+          "Icon left",
+          "Only"
+        ],
+        "Color": [
+          "Primary",
+          "Error",
+          "Warning",
+          "Success",
+          "Blue 2",
+          "Blue 1",
+          "Gray"
+        ]
+      },
+      "defaultVariantName": "Size=sm, Icon=False, Color=Gray",
+      "defaultVariantKey": "a21a249364a600fdeca739bf7e3f4752ca0df329"
+    },
+    {
+      "key": "5467ff48d0c32358e88acbefc5b4de23fa4b61d3",
+      "name": "Badge group",
+      "category": "Badges",
+      "isVariantSet": true,
+      "variants": {
+        "Badge": [
+          "Leading",
+          "Trailing"
+        ],
+        "Icon": [
+          "False",
+          "True"
+        ],
+        "Size": [
+          "md",
+          "lg"
+        ],
+        "Color": [
+          "Primary",
+          "Gray",
+          "Error",
+          "Warning",
+          "Success"
+        ],
+        "Theme": [
+          "Light",
+          "Medium",
+          "Dark"
+        ]
+      },
+      "defaultVariantName": "Badge=Leading, Icon=False, Size=md, Color=Primary, Theme=Light",
+      "defaultVariantKey": "b1e867ffdd864dca6f5046cae7095173cf52b4e1"
+    },
+    {
+      "key": "686dcf2a17b59dac100ee255771c126333bdf6a4",
+      "name": "Currency Badge",
+      "category": "Badges",
+      "isVariantSet": true,
+      "variants": {
+        "Property 1": [
+          "EUR",
+          "GBP",
+          "USD",
+          "Naira"
+        ]
+      },
+      "defaultVariantName": "Property 1=EUR",
+      "defaultVariantKey": "76c22b9750dcc5850afe2fbf76061da5bc485e2b"
+    },
+    {
+      "key": "74bb417e3ebac85c41d7b56ad2effc15443bef4a",
+      "name": "Split button",
+      "category": "Buttons",
+      "isVariantSet": true,
+      "variants": {
+        "Size": [
+          "Small",
+          "Medium",
+          "Large"
+        ],
+        "Action list": [
+          "Yes",
+          "No"
+        ]
+      },
+      "defaultVariantName": "Size=Small, Action list=No",
+      "defaultVariantKey": "6da33c157b1c7eacef96d737825c776b56981f93"
+    },
+    {
+      "key": "6ad679291b1c69ff1ac40ca39ee85e08846c2fc4",
+      "name": "Button",
+      "category": "Buttons",
+      "isVariantSet": true,
+      "variants": {
+        "Type": [
+          "Primary",
+          "Secondary",
+          "Outline",
+          "Tertiary",
+          "Tertiary plain",
+          "Tertiary destructive",
+          "Destructive",
+          "Destructive outline",
+          "Primary icon",
+          "Outline icon"
+        ],
+        "Size": [
+          "Small",
+          "Medium",
+          "Large"
+        ],
+        "Status": [
+          "Enabled",
+          "Disabled",
+          "Hover",
+          "Focus",
+          "Loading"
+        ],
+        "Theme": [
+          "Light"
+        ],
+        "Right icon": [
+          "Yes",
+          "No"
+        ],
+        "Left icon": [
+          "Yes",
+          "No"
+        ]
+      },
+      "defaultVariantName": "Type=Primary, Size=Small, Status=Enabled, Theme=Light, Right icon=No, Left icon=No",
+      "defaultVariantKey": "37ee57d4e68127509dd434a3e45518897bc21c7d"
+    },
+    {
+      "key": "d964b45709ff900d4c33210b1135558d8e050f34",
+      "name": "Checkbox",
+      "category": "Checkbox",
+      "isVariantSet": true,
+      "variants": {
+        "🔒 Size Class": [
+          "Regular",
+          "Compact"
+        ],
+        "Checked": [
+          "Off",
+          "On"
+        ],
+        "Indeterminate": [
+          "Off",
+          "On"
+        ],
+        "Title": [
+          "Off",
+          "On"
+        ],
+        "Subtitle": [
+          "Off",
+          "On"
+        ],
+        "State": [
+          "Normal",
+          "Disable",
+          "Hover",
+          "Active"
+        ]
+      },
+      "defaultVariantName": "🔒 Size Class=Regular, Checked=On, Indeterminate=Off, Title=On, Subtitle=Off, State=Normal",
+      "defaultVariantKey": "1f9fa8dcd4d50756e2e99cb670b05fc2dc63c7ac"
+    },
+    {
+      "key": "45081275f7c1e1b5ac3e6fc942718e09496de2c3",
+      "name": "Radio/checkbox",
+      "category": "Checkbox",
+      "isVariantSet": true,
+      "variants": {
+        "Type": [
+          "Checkbox",
+          "Radio"
+        ],
+        "State": [
+          "Default",
+          "Hover",
+          "Focused",
+          "Disabled"
+        ],
+        "Selected": [
+          "yes",
+          "no"
+        ],
+        "Indeterminate": [
+          "yes",
+          "no"
+        ],
+        "Text": [
+          "yes",
+          "no"
+        ],
+        "Supporting text": [
+          "yes",
+          "no"
+        ]
+      },
+      "defaultVariantName": "Type=Checkbox, State=Default, Selected=no, Indeterminate=no, Text=no, Supporting text=no",
+      "defaultVariantKey": "3e97a450c9bf4142564979bed95cf0fdb7ffc676"
+    },
+    {
+      "key": "59f5253d07301b1bffa6be4056c2d663e551a3ce",
+      "name": "Input",
+      "category": "Input",
+      "isVariantSet": true,
+      "variants": {
+        "Content type": [
+          "Text",
+          "Text area",
+          "Checkbox",
+          "Radio",
+          "Password"
+        ],
+        "State": [
+          "Default",
+          "Hover",
+          "Error",
+          "Active",
+          "Disabled"
+        ],
+        "Group": [
+          "None",
+          "Column",
+          "Row"
+        ],
+        "Placeholder": [
+          "No",
+          "Yes"
+        ],
+        "Prefix": [
+          "On",
+          "Off"
+        ]
+      },
+      "defaultVariantName": "Content type=Text, State=Default, Group=None, Placeholder=No, Prefix=Off",
+      "defaultVariantKey": "bdd3957ab5c653ce0ba132931f423aed125702d5"
+    },
+    {
+      "key": "c61ae614044b24ccea3de31bf66a3b245868db61",
+      "name": "Input",
+      "category": "Input",
+      "isVariantSet": true,
+      "variants": {
+        "Content type": [
+          "Text",
+          "Text area",
+          "Checkbox",
+          "Radio",
+          "Password"
+        ],
+        "State": [
+          "Default",
+          "Hover",
+          "Error",
+          "Active",
+          "Disabled"
+        ],
+        "Group": [
+          "None",
+          "Column",
+          "Row"
+        ],
+        "Placeholder": [
+          "No",
+          "Yes"
+        ],
+        "Prefix": [
+          "On",
+          "Off"
+        ]
+      },
+      "defaultVariantName": "Content type=Text, State=Default, Group=None, Placeholder=No, Prefix=Off",
+      "defaultVariantKey": "4f557231b30e5f0918bff8d5089065b591be3ebe"
+    },
+    {
+      "key": "bae8b0e4a940c7474bb9391fcddb7930bd581f37",
+      "name": "Dropdown Menu",
+      "category": "Input",
+      "isVariantSet": false
+    },
+    {
+      "key": "7e24c0a411f0d19a8f7dc7a345f4409f82ad4fa5",
+      "name": "Prefix selector",
+      "category": "Input",
+      "isVariantSet": true,
+      "variants": {
+        "Prefix type": [
+          "Country code",
+          "Country flag",
+          "Currency"
+        ]
+      },
+      "defaultVariantName": "Prefix type=Country code",
+      "defaultVariantKey": "20ed18b0bff9b4def6c971cdfb87c0ad38af4cf2"
+    },
+    {
+      "key": "cb9f0f08efe97ebc8b03baf2b599e4d65bf8136d",
+      "name": "Input Password",
+      "category": "Input",
+      "isVariantSet": true,
+      "variants": {
+        "Property 1": [
+          "Done",
+          "Fair",
+          "Good",
+          "See Password",
+          "Strong",
+          "Too short",
+          "Weak",
+          "Default"
+        ]
+      },
+      "defaultVariantName": "Property 1=Default",
+      "defaultVariantKey": "d302e414ebb848d6efcaa004d9081b1701134f9f"
+    },
+    {
+      "key": "e222f84a24ba3b871f07610a06ea2d2b148d7b94",
+      "name": "_DropdownItem",
+      "category": "Input",
+      "isVariantSet": true,
+      "variants": {
+        "Filled": [
+          "Off",
+          "On"
+        ],
+        "Badge": [
+          "no",
+          "yes"
+        ],
+        "State": [
+          "Default",
+          "Hover",
+          "Selected"
+        ]
+      },
+      "defaultVariantName": "Filled=Off, Badge=no, State=Default",
+      "defaultVariantKey": "0766dc7203b57c889ce7d1e27598d7a4186c800f"
+    },
+    {
+      "key": "a9f3e14c19d51656c7d753d2a153b832ee9b78f3",
+      "name": "Time selector",
+      "category": "Input",
+      "isVariantSet": true,
+      "variants": {
+        "Property 1": [
+          "Time"
+        ]
+      },
+      "defaultVariantName": "Property 1=Time",
+      "defaultVariantKey": "4e7bfdd9799d3bc40a3c1306d0a4868828033163"
+    },
+    {
+      "key": "3ccfecb0f8390444a8c8febae3c78c05b229c86c",
+      "name": "Input selector",
+      "category": "Input",
+      "isVariantSet": true,
+      "variants": {
+        "Property 1": [
+          "Deselected",
+          "Selected"
+        ]
+      },
+      "defaultVariantName": "Property 1=Selected",
+      "defaultVariantKey": "fe73d874d5eb51b0d645a5ce136c65e846307309"
+    },
+    {
+      "key": "5519d4e5654a10d138a7d4831dc239547dfe8fcb",
+      "name": "time_element",
+      "category": "Input",
+      "isVariantSet": true,
+      "variants": {
+        "Property 1": [
+          "active",
+          "default",
+          "hover"
+        ]
+      },
+      "defaultVariantName": "Property 1=default",
+      "defaultVariantKey": "3676bc364ffcaca28c9f955d3a05cc91dfb54578"
+    },
+    {
+      "key": "f7d8a0193d81810b50a6d0ea8f7e7798c28c2626",
+      "name": "Labelled switch",
+      "category": "Input",
+      "isVariantSet": true,
+      "variants": {
+        "Position": [
+          "left",
+          "right"
+        ],
+        "State": [
+          "Default",
+          "Selected"
+        ]
+      },
+      "defaultVariantName": "Position=left, State=Default",
+      "defaultVariantKey": "99d07d5466a1b9d00d7bada371080e57f7b2b569"
+    },
+    {
+      "key": "6a610158c596c40b09c085a9d0a213c766e38bef",
+      "name": "Accordion",
+      "category": "Accordion - Marketing pages",
+      "isVariantSet": true,
+      "variants": {
+        "Mode": [
+          "Desktop",
+          "Mobile"
+        ],
+        "Content": [
+          "No",
+          "Yes"
+        ]
+      },
+      "defaultVariantName": "Mode=Desktop, Content=Yes",
+      "defaultVariantKey": "c9e630526fcaf8ff4afb35e919e1be48f4b7d750"
+    },
+    {
+      "key": "d587a8bd143c3e3a38232707e58deee244ca28dc",
+      "name": "Accordion-slider",
+      "category": "Accordion slider  - Applications",
+      "isVariantSet": true,
+      "variants": {
+        "Mode": [
+          "Desktop",
+          "Mobile"
+        ],
+        "State": [
+          "Default",
+          "Hover"
+        ],
+        "Left icon": [
+          "Yes",
+          "No"
+        ],
+        "Label": [
+          "Yes"
+        ],
+        "Sub label": [
+          "Yes",
+          "No"
+        ],
+        "Detail": [
+          "Yes",
+          "No"
+        ],
+        "Content": [
+          "No",
+          "Yes"
+        ]
+      },
+      "defaultVariantName": "Mode=Desktop, State=Default, Left icon=Yes, Label=Yes, Sub label=Yes, Detail=Yes, Content=No",
+      "defaultVariantKey": "c187d99c770faca02ebbc14f87eab593de33f022"
+    },
+    {
+      "key": "ac7dac4ac8e20d605f276b69efe74c462eee6d9f",
+      "name": "Accordion content",
+      "category": "Accordion slider  - Applications",
+      "isVariantSet": true,
+      "variants": {
+        "Mode": [
+          "Mobile",
+          "Desktop"
+        ]
+      },
+      "defaultVariantName": "Mode=Desktop",
+      "defaultVariantKey": "957acf326a26933950dbd1cb232a9e64b6e0863e"
+    },
+    {
+      "key": "59cb7aff3d701ecc83188529f758ca402603f55e",
+      "name": "Action_list/Item",
+      "category": "Action list",
+      "isVariantSet": true,
+      "variants": {
+        "Item type": [
+          "Default",
+          "Destructive",
+          "Section",
+          "Help Text"
+        ],
+        "State": [
+          "Default",
+          "Hover",
+          "Pressed",
+          "Active",
+          "Focus",
+          "Disabled"
+        ],
+        "Left icon": [
+          "True",
+          "False"
+        ],
+        "Right icon": [
+          "False",
+          "True"
+        ]
+      },
+      "defaultVariantName": "Item type=Default, State=Default, Left icon=False, Right icon=False",
+      "defaultVariantKey": "742a53733245b741183f289eb6493160e5891b18"
+    },
+    {
+      "key": "a398faa7fab7cd8ca1097dc83253dec117e9d547",
+      "name": "Action_list/Group",
+      "category": "Action list",
+      "isVariantSet": true,
+      "variants": {
+        "Prefix Icon": [
+          "True",
+          "False"
+        ],
+        "Sections": [
+          "True",
+          "False"
+        ],
+        "Selected item": [
+          "True",
+          "False"
+        ],
+        "Helper Text": [
+          "True",
+          "False"
+        ]
+      },
+      "defaultVariantName": "Prefix Icon=False, Sections=False, Selected item=False, Helper Text=False",
+      "defaultVariantKey": "87f2e662df8a9b8963c1062106ec700364ce7dac"
+    },
+    {
+      "key": "46dd597738215c8eb80fa13ec0ebefdb9ad20fc4",
+      "name": "Alert",
+      "category": "Alert",
+      "isVariantSet": true,
+      "variants": {
+        "State": [
+          "Normal",
+          "Info",
+          "Warning",
+          "Success",
+          "Critical"
+        ],
+        "Orientation": [
+          "Horizontal",
+          "Vertical"
+        ]
+      },
+      "defaultVariantName": "State=Normal, Orientation=Vertical",
+      "defaultVariantKey": "c139c02694ea6ffb41878a84ab365ff6dba453a1"
+    },
+    {
+      "key": "3b30d4d5595dd3983cb8f1f2f2788b7b62aa5144",
+      "name": "Number",
+      "category": "Annotation component",
+      "isVariantSet": false
+    },
+    {
+      "key": "632853d3098d17068d74fa14560e54a2b0d223e3",
+      "name": "Circle",
+      "category": "Annotation component",
+      "isVariantSet": false
+    },
+    {
+      "key": "4da02a324ba16c6a87f023e75b284a0b77852fc3",
+      "name": "Arrow",
+      "category": "Annotation component",
+      "isVariantSet": false
+    },
+    {
+      "key": "2cbe4d6497c5b252cab714414ca69f7c43491cf5",
+      "name": "Tap",
+      "category": "Annotation component",
+      "isVariantSet": false
+    },
+    {
+      "key": "8e4c0837e9451895525f5fe9f3e4b445cf4a344d",
+      "name": "Positive",
+      "category": "Annotation component",
+      "isVariantSet": false
+    },
+    {
+      "key": "47b53f4ab61963806455cd30a7235acab03c303a",
+      "name": "Notification",
+      "category": "Annotation component",
+      "isVariantSet": false
+    },
+    {
+      "key": "e905ed8fd7dccc544f80e7799f9ff63d7e5222d2",
+      "name": "Hook",
+      "category": "Annotation component",
+      "isVariantSet": true,
+      "variants": {
+        "Line": [
+          "Solid",
+          "Dashed"
+        ]
+      },
+      "defaultVariantName": "Line=Solid",
+      "defaultVariantKey": "d8848f307f4250e042d85a454d6bb8b3a2fa14a5"
+    },
+    {
+      "key": "112edd97cf21e82ce0ee8fcab0f60b86f7cd6f35",
+      "name": "Fork",
+      "category": "Annotation component",
+      "isVariantSet": true,
+      "variants": {
+        "Line": [
+          "Solid",
+          "Dashed"
+        ]
+      },
+      "defaultVariantName": "Line=Solid",
+      "defaultVariantKey": "57f87b8834a0ee4273fe1a25d96c2a07bf63910f"
+    },
+    {
+      "key": "cde8700011cbbfe213fbc1e3bad68fdc2a078cec",
+      "name": "Snake",
+      "category": "Annotation component",
+      "isVariantSet": true,
+      "variants": {
+        "Line": [
+          "Solid",
+          "Dashed"
+        ]
+      },
+      "defaultVariantName": "Line=Solid",
+      "defaultVariantKey": "1c8b7a7cb107a9d75a9c8b83c71fe3836ad47802"
+    },
+    {
+      "key": "d93aa77d8f785c0f44cdf708e3df838391ebbc8d",
+      "name": "Regular",
+      "category": "Annotation component",
+      "isVariantSet": true,
+      "variants": {
+        "Line": [
+          "Solid",
+          "Dashed"
+        ]
+      },
+      "defaultVariantName": "Line=Solid",
+      "defaultVariantKey": "adf98aa704fdae1b59ea319771608e93412b34ea"
+    },
+    {
+      "key": "755bf3d825546014d009b1ad364332e749b3a509",
+      "name": "U-Turn",
+      "category": "Annotation component",
+      "isVariantSet": true,
+      "variants": {
+        "Line": [
+          "Solid",
+          "Dashed"
+        ]
+      },
+      "defaultVariantName": "Line=Solid",
+      "defaultVariantKey": "a655a88065ea9fbb6cd0984218a86ee66570441d"
+    },
+    {
+      "key": "e897cd3d2064a2111c43359a6ca19259e716f84e",
+      "name": "Curve",
+      "category": "Annotation component",
+      "isVariantSet": true,
+      "variants": {
+        "Line": [
+          "Solid",
+          "Dashed"
+        ]
+      },
+      "defaultVariantName": "Line=Solid",
+      "defaultVariantKey": "50a857d2a08eff04b7cd555d4ac495045f723d29"
+    },
+    {
+      "key": "c51a0037449804729cdae92300880dfeecf37371",
+      "name": "Left",
+      "category": "Annotation component",
+      "isVariantSet": true,
+      "variants": {
+        "Color": [
+          "Orange",
+          "Red",
+          "Pink",
+          "Purple",
+          "Blue",
+          "Green"
+        ]
+      },
+      "defaultVariantName": "Color=Orange",
+      "defaultVariantKey": "3cc091e17cdc2f4fc36f31c0e25d2a440d9fe765"
+    },
+    {
+      "key": "b0736206f2d68d9df1119f1be96cfe4038331437",
+      "name": "Right",
+      "category": "Annotation component",
+      "isVariantSet": true,
+      "variants": {
+        "Color": [
+          "Orange",
+          "Red",
+          "Pink",
+          "Purple",
+          "Blue",
+          "Green"
+        ]
+      },
+      "defaultVariantName": "Color=Orange",
+      "defaultVariantKey": "7dfc40a8b20565f5d3762ad4f98dd1173606ac21"
+    },
+    {
+      "key": "5da23de3ff588c1e5d05b8e922e7984565103393",
+      "name": "Top",
+      "category": "Annotation component",
+      "isVariantSet": true,
+      "variants": {
+        "Color": [
+          "Orange",
+          "Red",
+          "Pink",
+          "Purple",
+          "Blue",
+          "Green"
+        ]
+      },
+      "defaultVariantName": "Color=Orange",
+      "defaultVariantKey": "a716432f06e2b96479ed7bb2f88eb86c7ec23214"
+    },
+    {
+      "key": "1070f97d4ee1dd8f0091ea33384b26e2410778fc",
+      "name": "Bottom",
+      "category": "Annotation component",
+      "isVariantSet": true,
+      "variants": {
+        "Color": [
+          "Orange",
+          "Red",
+          "Pink",
+          "Purple",
+          "Blue",
+          "Green"
+        ]
+      },
+      "defaultVariantName": "Color=Orange",
+      "defaultVariantKey": "ffa671d4fd4f30ee9986f0711a17ae62ca7c9df1"
+    },
+    {
+      "key": "54167701fd9842ceffd459bb823f5734600cfbc2",
+      "name": "Rectangle",
+      "category": "Annotation component",
+      "isVariantSet": true,
+      "variants": {
+        "Color": [
+          "White",
+          "Transparent",
+          "Black"
+        ]
+      },
+      "defaultVariantName": "Color=Transparent",
+      "defaultVariantKey": "dcdb489185d1a7cec34783c7392d0285a490b70a"
+    },
+    {
+      "key": "8f01c44f95e4b2d8a2a10fd182f620075a23d1eb",
+      "name": "Pill",
+      "category": "Annotation component",
+      "isVariantSet": true,
+      "variants": {
+        "Color": [
+          "White",
+          "Transparent",
+          "Black"
+        ]
+      },
+      "defaultVariantName": "Color=Transparent",
+      "defaultVariantKey": "1200a1f236e9b69675dc1d2dfd21bfa597bccf20"
+    },
+    {
+      "key": "6d1e8657f3a9155096855aedbdebdeba506c4a87",
+      "name": "Diamond",
+      "category": "Annotation component",
+      "isVariantSet": true,
+      "variants": {
+        "Color": [
+          "White",
+          "Transparent",
+          "Black"
+        ]
+      },
+      "defaultVariantName": "Color=Transparent",
+      "defaultVariantKey": "cf9c66480e3891af446090000d904e543d921c4d"
+    },
+    {
+      "key": "0582fb41bd3b36a0e79ea6cd8ec0175acfd58892",
+      "name": "Modal",
+      "category": "Annotation component",
+      "isVariantSet": true,
+      "variants": {
+        "Color": [
+          "White",
+          "Transparent",
+          "Black"
+        ]
+      },
+      "defaultVariantName": "Color=Transparent",
+      "defaultVariantKey": "9b9e3b7fec64465922e4c303a53a38c0232ce69f"
+    },
+    {
+      "key": "e03f7dd3f7d8be485a2d9a876133d506923a2cd9",
+      "name": "Web Page",
+      "category": "Annotation component",
+      "isVariantSet": true,
+      "variants": {
+        "Color": [
+          "White",
+          "Transparent",
+          "Black"
+        ]
+      },
+      "defaultVariantName": "Color=Transparent",
+      "defaultVariantKey": "48f1349942bb684c24b633ea492e89d790241c20"
+    },
+    {
+      "key": "d749c02357751f8973c42c34578d49dcc69d6359",
+      "name": "Mobile Page",
+      "category": "Annotation component",
+      "isVariantSet": true,
+      "variants": {
+        "Color": [
+          "White",
+          "Black",
+          "Transparent"
+        ]
+      },
+      "defaultVariantName": "Color=Transparent",
+      "defaultVariantKey": "42fbed39170b75ae9c37162a725da9fc8070cf59"
+    },
+    {
+      "key": "6801246033bf6b25794b806b214c63285a5755fa",
+      "name": "Tag",
+      "category": "Annotation component",
+      "isVariantSet": true,
+      "variants": {
+        "Color": [
+          "White",
+          "Transparent",
+          "Black"
+        ]
+      },
+      "defaultVariantName": "Color=Transparent",
+      "defaultVariantKey": "32b6296e15846fb990bce9a389c379b6b763a185"
+    },
+    {
+      "key": "cf7c679b0bb65f5221592611301102782864946c",
+      "name": "Icon Tag",
+      "category": "Annotation component",
+      "isVariantSet": true,
+      "variants": {
+        "Color": [
+          "White",
+          "Transparent",
+          "Black"
+        ]
+      },
+      "defaultVariantName": "Color=Transparent",
+      "defaultVariantKey": "c19a64d3efec252120f89181d598bfb4ea5c632c"
+    },
+    {
+      "key": "dca7a7b8cf2bfb55eb4a096b31dfe3dc7a23074b",
+      "name": "_Avatar image",
+      "category": "Avatar",
+      "isVariantSet": true,
+      "variants": {
+        "Show source": [
+          "False",
+          "True"
+        ],
+        "Type": [
+          "Square",
+          "Portrait"
+        ]
+      },
+      "defaultVariantName": "Show source=True, Type=Square",
+      "defaultVariantKey": "0e78928535a5e796a7bf1638464f52dc8d7b5f82"
+    },
+    {
+      "key": "f3f385a58e3d24a07d98431d9e58e6c61d8a6c97",
+      "name": "_Avatar online indicator",
+      "category": "Avatar",
+      "isVariantSet": true,
+      "variants": {
+        "Size": [
+          "xs",
+          "sm",
+          "md",
+          "lg",
+          "xl",
+          "2xl"
+        ],
+        "Online": [
+          "False",
+          "True"
+        ]
+      },
+      "defaultVariantName": "Size=xs, Online=False",
+      "defaultVariantKey": "d480879520951c705d966e5ff37dbbc3b68711cd"
+    },
+    {
+      "key": "209dad8fa23d0f573fbc627c51cbe3ccf283c568",
+      "name": "Avatar label group",
+      "category": "Avatar",
+      "isVariantSet": true,
+      "variants": {
+        "Size": [
+          "sm",
+          "md",
+          "lg",
+          "xl"
+        ],
+        "Status icon": [
+          "Online indicator",
+          "False",
+          "Company"
+        ],
+        "State": [
+          "Default",
+          "Hover",
+          "Focus"
+        ]
+      },
+      "defaultVariantName": "Size=sm, Status icon=False, State=Default",
+      "defaultVariantKey": "480260c50c513fe88a2532236455114d81ee2fa9"
+    },
+    {
+      "key": "865c46ec7b250fed895edbe7edf5d3f3ac65e29b",
+      "name": "Avatar",
+      "category": "Avatar",
+      "isVariantSet": true,
+      "variants": {
+        "Size": [
+          "xs",
+          "sm",
+          "md",
+          "lg",
+          "xl",
+          "2xl"
+        ],
+        "Placeholder": [
+          "False",
+          "True"
+        ],
+        "Text": [
+          "False",
+          "True"
+        ],
+        "Status icon": [
+          "False",
+          "Online indicator",
+          "Company"
+        ],
+        "State": [
+          "Default",
+          "Hover",
+          "Focused"
+        ]
+      },
+      "defaultVariantName": "Size=xs, Placeholder=False, Text=False, Status icon=False, State=Default",
+      "defaultVariantKey": "ebda41b65c349a6ca8b9264ef278c824e500b5ae"
+    },
+    {
+      "key": "e52641afdfe2bc947981fe02ba7e27d5145335f6",
+      "name": "_Avatar company icon",
+      "category": "Avatar",
+      "isVariantSet": true,
+      "variants": {
+        "Size": [
+          "xs",
+          "sm",
+          "md",
+          "lg",
+          "xl",
+          "2xl"
+        ]
+      },
+      "defaultVariantName": "Size=xs",
+      "defaultVariantKey": "58ffdd3c3bea488ff305af81c46cb6d48edef67c"
+    },
+    {
+      "key": "fc60872b48e35735c9ffd82e48ffbb905f753ee6",
+      "name": "_Avatar add button",
+      "category": "Avatar",
+      "isVariantSet": true,
+      "variants": {
+        "Size": [
+          "xs",
+          "sm",
+          "md"
+        ],
+        "State": [
+          "Default",
+          "Hover",
+          "Focus",
+          "Disabled"
+        ]
+      },
+      "defaultVariantName": "Size=xs, State=Default",
+      "defaultVariantKey": "11d2dd0795a8a28fe9e0aede02f7aaa24110ed4e"
+    },
+    {
+      "key": "d9c34307eb3ba3f9ff07dea8cac5ba5fec823a0c",
+      "name": "Avatar profile photo",
+      "category": "Avatar",
+      "isVariantSet": true,
+      "variants": {
+        "Placeholder": [
+          "False",
+          "True"
+        ],
+        "Text": [
+          "False",
+          "True"
+        ],
+        "Size": [
+          "md",
+          "lg"
+        ]
+      },
+      "defaultVariantName": "Placeholder=False, Text=False, Size=md",
+      "defaultVariantKey": "b30897df9c5cb299e1cfdbb9d94391350fd2c6e4"
+    },
+    {
+      "key": "e58efe983a2aba9f5bade88165ff5f03f32dbe2d",
+      "name": "Avatar group",
+      "category": "Avatar",
+      "isVariantSet": true,
+      "variants": {
+        "Size": [
+          "xs",
+          "sm",
+          "md"
+        ],
+        "Add user button": [
+          "False",
+          "True"
+        ],
+        "More users": [
+          "False",
+          "True"
+        ]
+      },
+      "defaultVariantName": "Size=xs, Add user button=True, More users=True",
+      "defaultVariantKey": "9d39040e37a12ad34b6c832ce190615e0b37912e"
+    },
+    {
+      "key": "31cb4a12b8693a531187fc752dbbc7672b708356",
+      "name": "Browser toolbar",
+      "category": "Browser Tool Bar",
+      "isVariantSet": true,
+      "variants": {
+        "Type": [
+          "Safari",
+          "Minimal monotone",
+          "Minimal color"
+        ],
+        "Theme": [
+          "Light",
+          "Dark"
+        ]
+      },
+      "defaultVariantName": "Type=Minimal color, Theme=Light",
+      "defaultVariantKey": "4509d5bd2cd84b1531560977258059b3faefaa4d"
+    },
+    {
+      "key": "7ff220bfdaa6996d7d3be81558aa27dbad3d5d6b",
+      "name": "Breadcrumb ",
+      "category": "Breadcrumbs - WIP",
+      "isVariantSet": true,
+      "variants": {
+        "Type": [
+          "without container"
+        ],
+        "Level": [
+          "one",
+          "overflow beginning",
+          "overflow middle",
+          "three",
+          "two"
+        ],
+        "Content": [
+          "text to text"
+        ],
+        "State": [
+          "Rest",
+          "Hover/ previous",
+          "Hover/ current",
+          "Focused/ previous",
+          "Focused/ current"
+        ]
+      },
+      "defaultVariantName": "Type=without container, Level=overflow beginning, Content=text to text, State=Rest",
+      "defaultVariantKey": "9f9911ef46517569267b70e289a9b8faa3a5b0d1"
+    },
+    {
+      "key": "b644f6ebc7b6d40c20d2ff3721bca93cabf1e592",
+      "name": "BackDrop",
+      "category": "Back Drop",
+      "isVariantSet": true,
+      "variants": {
+        "Property 1": [
+          "Back Drop - Mobile",
+          "Back drop - Desktop"
+        ]
+      },
+      "defaultVariantName": "Property 1=Back Drop - Mobile",
+      "defaultVariantKey": "39f335eb5df824dcd4cc57e6824b793ec47f83fa"
+    },
+    {
+      "key": "0fb271f7c6f619487849928461fcc796e3262f5f",
+      "name": "Card",
+      "category": "Carousel & Cards",
+      "isVariantSet": true,
+      "variants": {
+        "Style": [
+          "Tint",
+          "Shadow",
+          "Outline"
+        ]
+      },
+      "defaultVariantName": "Style=Tint",
+      "defaultVariantKey": "62b0c5297cd88eac455783f1ee58ae15d5a9e5cc"
+    },
+    {
+      "key": "7f873b88e031556169e4949abbc8037e801a2081",
+      "name": "Card Grid",
+      "category": "Carousel & Cards",
+      "isVariantSet": true,
+      "variants": {
+        "Size": [
+          "Small",
+          "Medium",
+          "Large"
+        ],
+        "Padding": [
+          "True",
+          "False"
+        ]
+      },
+      "defaultVariantName": "Size=Small, Padding=True",
+      "defaultVariantKey": "e88504e354c717adfe4bf4f6108f2956ca68e1e5"
+    },
+    {
+      "key": "72fb25e309a91085cc4682cacb1a396f6e2af5d9",
+      "name": "Card Scroll",
+      "category": "Carousel & Cards",
+      "isVariantSet": true,
+      "variants": {
+        "Size": [
+          "Small",
+          "Medium",
+          "Large"
+        ],
+        "Padding": [
+          "True",
+          "False"
+        ]
+      },
+      "defaultVariantName": "Size=Small, Padding=True",
+      "defaultVariantKey": "164f0c21276968f541265f091a07387bb3dc871f"
+    },
+    {
+      "key": "ddd2683085da0d7a41a312bfd68c090a357b8453",
+      "name": "Content Card",
+      "category": "Carousel & Cards",
+      "isVariantSet": true,
+      "variants": {
+        "📲 Size Class": [
+          "Regular",
+          "Compact"
+        ],
+        "Mode": [
+          "Shadow",
+          "Tint",
+          "Outline"
+        ]
+      },
+      "defaultVariantName": "📲 Size Class=Regular, Mode=Shadow",
+      "defaultVariantKey": "dbe55d5194aac03afabeefa960e750dbb8426347"
+    },
+    {
+      "key": "254c3ce3035ebe139d3d25891faf1bfc7bf1304d",
+      "name": "Carousel",
+      "category": "Carousel & Cards",
+      "isVariantSet": true,
+      "variants": {
+        "Container": [
+          "1",
+          "2",
+          "3"
+        ]
+      },
+      "defaultVariantName": "Container=1",
+      "defaultVariantKey": "5757de198bbd4d4aeba3d15aae78be19e6b7564c"
+    },
+    {
+      "key": "777a0cd96550db5e04da8198b81c210e0c07b991",
+      "name": "Indicators",
+      "category": "Carousel & Cards",
+      "isVariantSet": true,
+      "variants": {
+        "Selected": [
+          "1",
+          "2",
+          "3"
+        ]
+      },
+      "defaultVariantName": "Selected=1",
+      "defaultVariantKey": "c3a910c2c8c822339f8393a79f8eb3a4ed7ec439"
+    },
+    {
+      "key": "6d1ff8afabbb3c3098edc81ca1991c42022d64bf",
+      "name": "Gallery",
+      "category": "Carousel & Cards",
+      "isVariantSet": false
+    },
+    {
+      "key": "f4b685f2a574c140b1a26e4d23f5eac254b97844",
+      "name": "Image Container",
+      "category": "Carousel & Cards",
+      "isVariantSet": false
+    },
+    {
+      "key": "1ee086d29ef825b692d98c7dca9a7b38cf427282",
+      "name": "Cookie banner",
+      "category": "Cookie",
+      "isVariantSet": true,
+      "variants": {
+        "Responded": [
+          "False",
+          "True"
+        ]
+      },
+      "defaultVariantName": "Responded=False",
+      "defaultVariantKey": "76a54754bc7d72e7dbe3203803562cc1391c1f19"
+    },
+    {
+      "key": "3cd7aaab411176970eee2d020ab8719bda6f0b81",
+      "name": "Cookie Compact",
+      "category": "Cookie",
+      "isVariantSet": true,
+      "variants": {
+        "Property 1": [
+          "Cookie Horizontal",
+          "Cookie Vertical",
+          "Cookie Without Decline",
+          "Mobile"
+        ]
+      },
+      "defaultVariantName": "Property 1=Cookie Horizontal",
+      "defaultVariantKey": "f32452ef53fbd4a7acedf294c78562957c11dc41"
+    },
+    {
+      "key": "cc2f59dcd5a2b7d42f5193370c4fd1bda14a274a",
+      "name": "Cookie Stretch",
+      "category": "Cookie",
+      "isVariantSet": true,
+      "variants": {
+        "Property 1": [
+          "Default"
+        ]
+      },
+      "defaultVariantName": "Property 1=Default",
+      "defaultVariantKey": "82ba3aceaf0d9d8754e1139c65302b025d2e6fdd"
+    },
+    {
+      "key": "2dd7b6abdd49ba39ab16786296812123077922f9",
+      "name": "Pie Chart",
+      "category": "Chart / Graphs - WIP",
+      "isVariantSet": true,
+      "variants": {
+        "Property 1": [
+          "4",
+          "2",
+          "3"
+        ]
+      },
+      "defaultVariantName": "Property 1=2",
+      "defaultVariantKey": "244856c8da8f183d27d59f57a775567c9b024301"
+    },
+    {
+      "key": "b5ea81eb9deb26d17592a24f3f29e2428db6a8d0",
+      "name": "Pie Chart vertical",
+      "category": "Chart / Graphs - WIP",
+      "isVariantSet": true,
+      "defaultVariantName": "Property 1=Default",
+      "defaultVariantKey": "2307f36f3eaccd947dde0b998c83460874c25dbc"
+    },
+    {
+      "key": "acbdfb4873f5da184c8eb867ca7d1e0aadde8e88",
+      "name": "Pie chart horizontal",
+      "category": "Chart / Graphs - WIP",
+      "isVariantSet": true,
+      "variants": {
+        "Property 1": [
+          "3",
+          "2"
+        ]
+      },
+      "defaultVariantName": "Property 1=2",
+      "defaultVariantKey": "f47f11b628bd4da1c3aa13cbc317d9f381493cc8"
+    },
+    {
+      "key": "fba724e76ec0abdc277f029b6a404746f9779cc9",
+      "name": "Semi Pie",
+      "category": "Chart / Graphs - WIP",
+      "isVariantSet": true,
+      "variants": {
+        "Property 1": [
+          "4",
+          "2",
+          "3"
+        ]
+      },
+      "defaultVariantName": "Property 1=2",
+      "defaultVariantKey": "7574bce9bf1f89d77b320114b6c18b525a1afabf"
+    },
+    {
+      "key": "6601f73c52a60b021c0c08cfd48ce17c881156d2",
+      "name": "Pie cards",
+      "category": "Chart / Graphs - WIP",
+      "isVariantSet": true,
+      "variants": {
+        "Property 1": [
+          "5",
+          "4"
+        ]
+      },
+      "defaultVariantName": "Property 1=4",
+      "defaultVariantKey": "caf0378c6053a6379a446c243151d3cff036d2d8"
+    },
+    {
+      "key": "3d3bb460d30242085024e4ee9503e61850a066c2",
+      "name": "Line chart",
+      "category": "Chart / Graphs - WIP",
+      "isVariantSet": true,
+      "variants": {
+        "Property 1": [
+          "4",
+          "1",
+          "2",
+          "3"
+        ]
+      },
+      "defaultVariantName": "Property 1=1",
+      "defaultVariantKey": "0026a458f42367b8ab7dec9a8ada5e016421a0ae"
+    },
+    {
+      "key": "32539edfd84d064598e532076a3790bd138f6317",
+      "name": "Chart Cards",
+      "category": "Chart / Graphs - WIP",
+      "isVariantSet": true,
+      "variants": {
+        "Property 1": [
+          "5",
+          "3",
+          "4"
+        ]
+      },
+      "defaultVariantName": "Property 1=3",
+      "defaultVariantKey": "e22f7dd1b9e02a049a12da6a8ca44cc85f3af7f1"
+    },
+    {
+      "key": "9d3b1f4279c474e221e52f16fffa8ff073c1a593",
+      "name": "Chart",
+      "category": "Chart / Graphs - WIP",
+      "isVariantSet": true,
+      "variants": {
+        "Property 1": [
+          "Default",
+          "3",
+          "4"
+        ]
+      },
+      "defaultVariantName": "Property 1=Default",
+      "defaultVariantKey": "c76cc837f8dd7948bf9613b2f1e23a258ba8c23a"
+    },
+    {
+      "key": "8fd6f7a49a360e7a42a10634d85189dd4433872b",
+      "name": "Bar chart",
+      "category": "Chart / Graphs - WIP",
+      "isVariantSet": true,
+      "variants": {
+        "Property 1": [
+          "3",
+          "1",
+          "2"
+        ]
+      },
+      "defaultVariantName": "Property 1=1",
+      "defaultVariantKey": "092ba5bffbe788d7770a62dce1e275c648c8d333"
+    },
+    {
+      "key": "768e067c1272d536592afd983770b5a214ed4e09",
+      "name": "Bar Chart 2 ",
+      "category": "Chart / Graphs - WIP",
+      "isVariantSet": true,
+      "variants": {
+        "Property 1": [
+          "1",
+          "3",
+          "2"
+        ]
+      },
+      "defaultVariantName": "Property 1=1",
+      "defaultVariantKey": "ff779f71075eb5959017388385bea54701c6110f"
+    },
+    {
+      "key": "eb31252e7d97298eaa9cf660435b2ea92639400b",
+      "name": "Histogram",
+      "category": "Chart / Graphs - WIP",
+      "isVariantSet": true,
+      "variants": {
+        "Property 1": [
+          "3",
+          "1",
+          "2"
+        ]
+      },
+      "defaultVariantName": "Property 1=1",
+      "defaultVariantKey": "67d2ac4bc1f1c0829f1f31d0998608bb20f7f38e"
+    },
+    {
+      "key": "c67219714a809b8bd32bbcd8a7a4e1df87b803ab",
+      "name": "Text",
+      "category": "Chart / Graphs - WIP",
+      "isVariantSet": false
+    },
+    {
+      "key": "073853eaf16ad36dec703d51fe00c1047f137f26",
+      "name": "Data placeholder",
+      "category": "Chart / Graphs - WIP",
+      "isVariantSet": false
+    },
+    {
+      "key": "f4589ccb25ada2a30141a015ec2a4d6adfbf6e3f",
+      "name": "1.0 Chip",
+      "category": "Chip",
+      "isVariantSet": true,
+      "variants": {
+        "Status": [
+          "Default",
+          "Success",
+          "Warning",
+          "Danger"
+        ],
+        "State": [
+          "Default",
+          "Hover",
+          "Focus",
+          "Active",
+          "Disable"
+        ]
+      },
+      "defaultVariantName": "Status=Default, State=Default",
+      "defaultVariantKey": "bd3c82f70279ff92f1590baa5472f8bb3423535a"
+    },
+    {
+      "key": "7307bda4b154569b6f5b12c51055fcc2f6ceb90a",
+      "name": "Color Picker",
+      "category": "Color picker",
+      "isVariantSet": false
+    },
+    {
+      "key": "a5f0a85000d19899b9d0d64eed8cff37f6338c0a",
+      "name": "color picker",
+      "category": "Color picker",
+      "isVariantSet": true,
+      "variants": {
+        "Dark Mode": [
+          "false",
+          "true"
+        ],
+        "Style": [
+          "1",
+          "2"
+        ]
+      },
+      "defaultVariantName": "Dark Mode=false, Style=1",
+      "defaultVariantKey": "320b1f9f3b78fdc4e6ddb83b422912635ef7a5f4"
+    },
+    {
+      "key": "f3e0670af900ca7fa8e55097d5b1ddb3b074e619",
+      "name": "Date picker",
+      "category": "Date picker",
+      "isVariantSet": true,
+      "variants": {
+        "Filled Range": [
+          "Off",
+          "On"
+        ]
+      },
+      "defaultVariantName": "Filled Range=Off",
+      "defaultVariantKey": "9f5566976d2db80f3aff9542629a6a7bf8831488"
+    },
+    {
+      "key": "e2f527f1ecd40107bb310bf83a3f139a4e29ba9c",
+      "name": "_Day Cell",
+      "category": "Date picker",
+      "isVariantSet": true,
+      "variants": {
+        "State": [
+          "Empty",
+          "Default",
+          "Active",
+          "Hover",
+          "Selected",
+          "Muted"
+        ],
+        "Range Radius": [
+          "None",
+          "Left",
+          "Right"
+        ],
+        "Current date": [
+          "Off",
+          "On"
+        ]
+      },
+      "defaultVariantName": "State=Empty, Range Radius=None, Current date=Off",
+      "defaultVariantKey": "86a9e5eee2e9f4b46250d6963751c8b447c52152"
+    },
+    {
+      "key": "94a7473e55c24df2a4e2bf2b22ca9be8a06970d7",
+      "name": "_Calendar Base",
+      "category": "Date picker",
+      "isVariantSet": true,
+      "variants": {
+        "🔒 Selects": [
+          "Off",
+          "On"
+        ]
+      },
+      "defaultVariantName": "🔒 Selects=On",
+      "defaultVariantKey": "4911ec281c99ba0a41195c5ef9ef1235499f2756"
+    },
+    {
+      "key": "925dbf0465d4e680d4955d5eba8b29810d6ca7c4",
+      "name": "Single date",
+      "category": "Date picker",
+      "isVariantSet": false
+    },
+    {
+      "key": "48c36597a01e3052676d51cc2f7b780f06590449",
+      "name": "–––– Divider ––––",
+      "category": "Dividers",
+      "isVariantSet": true,
+      "variants": {
+        "Breakpoint": [
+          "Desktop",
+          "Mobile"
+        ]
+      },
+      "defaultVariantName": "Breakpoint=Desktop",
+      "defaultVariantKey": "d5f21254b7cf7357316a3c5863aba169a014e088"
+    },
+    {
+      "key": "83e17d4444c3e6e12e236a702710447088157f03",
+      "name": "DIvider & Lines",
+      "category": "Dividers",
+      "isVariantSet": true,
+      "variants": {
+        "Type": [
+          "Lined",
+          "Radial",
+          "Dashed",
+          "Linear"
+        ],
+        "Size": [
+          "Large",
+          "Medium",
+          "Small"
+        ]
+      },
+      "defaultVariantName": "Type=Radial, Size=Large",
+      "defaultVariantKey": "a360785654104d93f42c4aad5cf417966d34f961"
+    },
+    {
+      "key": "b122f0f40c76c9edac6e765432505de2def7c307",
+      "name": "Email template",
+      "category": "Email template",
+      "isVariantSet": true,
+      "variants": {
+        "Property 1": [
+          "Email template - Dark",
+          "Email template - Light"
+        ]
+      },
+      "defaultVariantName": "Property 1=Email template - Light",
+      "defaultVariantKey": "95a1f4549c7a3032092a86098f31587f7c4b55d5"
+    },
+    {
+      "key": "f8d1ffa5efb238146cf3d759db795da0241ac97c",
+      "name": "EmptyState",
+      "category": "Empty State",
+      "isVariantSet": true,
+      "variants": {
+        "description": [
+          "true",
+          "false"
+        ],
+        "action": [
+          "true",
+          "false"
+        ]
+      },
+      "defaultVariantName": "description=false, action=false",
+      "defaultVariantKey": "bded31f7a19e4cb327427c7554a64925c7abea9f"
+    },
+    {
+      "key": "cb0b7a84d445b65a036abcb96dcd49214356a2d7",
+      "name": "Empty State / No Tags",
+      "category": "Empty State",
+      "isVariantSet": false
+    },
+    {
+      "key": "2f26d3f37763d50bc12de7d7b228edbb740a672b",
+      "name": "Empty State / No Internet Data",
+      "category": "Empty State",
+      "isVariantSet": false
+    },
+    {
+      "key": "b71d36a79ddf5f4c753c11b97c6a383d7a3b4ba6",
+      "name": "Empty State / No Transactions",
+      "category": "Empty State",
+      "isVariantSet": false
+    },
+    {
+      "key": "72144434ebcc57e2b505a221c69171567c2f80cf",
+      "name": "Empty State / No  Notifications",
+      "category": "Empty State",
+      "isVariantSet": false
+    },
+    {
+      "key": "0f8f6e4f116e5aafaeb530bec71c08fe9d066a05",
+      "name": "Empty State / No Files",
+      "category": "Empty State",
+      "isVariantSet": false
+    },
+    {
+      "key": "aec50db151436481fb620be1080f8e1395a2fa43",
+      "name": "Empty State / No Result",
+      "category": "Empty State",
+      "isVariantSet": false
+    },
+    {
+      "key": "be16145c968fc833b1c6e06a48f1c1234e1f9647",
+      "name": "Empty State / No Barcode",
+      "category": "Empty State",
+      "isVariantSet": false
+    },
+    {
+      "key": "baaf01481ca463c9d2cd6b4fa920fc3c5a8a350d",
+      "name": "Empty State / Poor Connection",
+      "category": "Empty State",
+      "isVariantSet": false
+    },
+    {
+      "key": "6ce4fe79051a4d181450b3db1071844d3d3cde9c",
+      "name": "Empty State / No Content",
+      "category": "Empty State",
+      "isVariantSet": false
+    },
+    {
+      "key": "821391297622cfbc37839f8c7b966a7b20aa7b0a",
+      "name": "Footer",
+      "category": "Footer",
+      "isVariantSet": true,
+      "variants": {
+        "Type": [
+          "Large 01",
+          "Large 02",
+          "Large 03",
+          "Large 04",
+          "Large 05",
+          "Large 06",
+          "Large 07",
+          "Large 08",
+          "Large 09",
+          "Large 10",
+          "Large 11",
+          "Large 12",
+          "Large 13",
+          "Large 14",
+          "Large 15",
+          "Large 16",
+          "Small 01",
+          "Small 02",
+          "Small 03",
+          "Small 04"
+        ],
+        "Theme": [
+          "Default",
+          "Primary dark"
+        ],
+        "Breakpoint": [
+          "Desktop",
+          "Mobile"
+        ]
+      },
+      "defaultVariantName": "Type=Large 01, Theme=Default, Breakpoint=Desktop",
+      "defaultVariantKey": "bca1cb81705be5be3c8df480ba85e4f202a9e58e"
+    },
+    {
+      "key": "fbd84ce149cf2666990e1483d42884e67741a114",
+      "name": "Filter in a Side Panel",
+      "category": "Filters - WIP",
+      "isVariantSet": true,
+      "defaultVariantName": "Property 1=List",
+      "defaultVariantKey": "51c00bd17b55a254383ad41597b83e4294425309"
+    },
+    {
+      "key": "1ba172b517a1de0714883d39fcd7e5dd67259a5e",
+      "name": "Filter",
+      "category": "Filters - WIP",
+      "isVariantSet": true,
+      "variants": {
+        "Property 1": [
+          "web",
+          "mobile"
+        ],
+        "Property 2": [
+          "option"
+        ],
+        "Property 3": [
+          "active",
+          "default",
+          "hover"
+        ]
+      },
+      "defaultVariantName": "Property 1=web, Property 2=option, Property 3=default",
+      "defaultVariantKey": "b6ef9d24f5871e0c5a294e49149b8b012611e8c4"
+    },
+    {
+      "key": "c5defe5dee326a09b6c0c49c1a5ef439a9f43c31",
+      "name": "Full-width header navigation",
+      "category": "Headers - WIP",
+      "isVariantSet": true,
+      "variants": {
+        "Open": [
+          "False",
+          "True"
+        ],
+        "Mobile subnav open": [
+          "False",
+          "True"
+        ],
+        "Type": [
+          "2-col with sidebar",
+          "2-col slim with footer",
+          "3-col with sidebar",
+          "Blog posts with footer",
+          "4-col with footer",
+          "Blog posts with sidebar",
+          "2-col with links"
+        ],
+        "Breakpoint": [
+          "Desktop",
+          "Mobile"
+        ]
+      },
+      "defaultVariantName": "Open=False, Mobile subnav open=False, Type=2-col with sidebar, Breakpoint=Desktop",
+      "defaultVariantKey": "d0214acb7ae521ef2369e12b7e1526fd3482e1b1"
+    },
+    {
+      "key": "6a1517e18b0f48fea62dda6b64ac033269b2cfda",
+      "name": "Theme selector",
+      "category": "Headers - WIP",
+      "isVariantSet": true,
+      "variants": {
+        "State": [
+          "clicked",
+          "default",
+          "hover"
+        ]
+      },
+      "defaultVariantName": "State=default",
+      "defaultVariantKey": "3946a2b1bd7fb9c1f086414b01281abff802eaf5"
+    },
+    {
+      "key": "f232a190a51182e74fd831b7125b547832168a1d",
+      "name": "Header",
+      "category": "Headers - WIP",
+      "isVariantSet": true,
+      "variants": {
+        "Property 1": [
+          "Default",
+          "Variant2",
+          "Back button"
+        ]
+      },
+      "defaultVariantName": "Property 1=Default",
+      "defaultVariantKey": "0e0b659b5788cb29db5658d6468271d1700314c4"
+    },
+    {
+      "key": "0b038c69adfa541213881216793840506794685c",
+      "name": "Loading",
+      "category": "Loading Component",
+      "isVariantSet": true,
+      "variants": {
+        "type": [
+          "page",
+          "inline"
+        ]
+      },
+      "defaultVariantName": "type=page",
+      "defaultVariantKey": "0637674d1780891e283b7a4d9471a51089bc14ab"
+    },
+    {
+      "key": "7bddcf3c57c623004ca0eecd9ab62c8748ddee46",
+      "name": "Animation",
+      "category": "Loading Component",
+      "isVariantSet": true,
+      "variants": {
+        "Property 1": [
+          "Default",
+          "Default 2"
+        ]
+      },
+      "defaultVariantName": "Property 1=Default 2",
+      "defaultVariantKey": "05777a5e7b80ec7291cea6acfe13ac0312f8ac81"
+    },
+    {
+      "key": "bab654d0fa94c7f7847b1516623c1152e1811554",
+      "name": "Loader anim",
+      "category": "Loading Component",
+      "isVariantSet": true,
+      "variants": {
+        "state": [
+          "1",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "2",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9"
+        ]
+      },
+      "defaultVariantName": "state=1",
+      "defaultVariantKey": "bf1c0bb33947aa6d66dbfef941415093284319dd"
+    },
+    {
+      "key": "29a54caaaf3a85468495f993bf1f5f5049626c53",
+      "name": "Loader anim 2",
+      "category": "Loading Component",
+      "isVariantSet": true,
+      "variants": {
+        "state": [
+          "1",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "2",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9"
+        ]
+      },
+      "defaultVariantName": "state=1",
+      "defaultVariantKey": "f904060160872d2e4ff578abcd9845b6c747f5f9"
+    },
+    {
+      "key": "7a672b050e487d01622f13f792aab097352e770a",
+      "name": "_Message emoji",
+      "category": "Memojis",
+      "isVariantSet": true,
+      "variants": {
+        "Emoji": [
+          "Eyes",
+          "Heart black",
+          "Heart blue",
+          "Heart brown",
+          "Heart green",
+          "Heart orange",
+          "Heart purple",
+          "Heart red",
+          "Heart white",
+          "Heart yellow",
+          "Okay",
+          "Shakas",
+          "Slight smile",
+          "Smile",
+          "Sweat smile",
+          "Thumbs down",
+          "Thumbs up",
+          "Wink"
+        ]
+      },
+      "defaultVariantName": "Emoji=Heart red",
+      "defaultVariantKey": "b269a23c372990b38319a3272f80ef1b2ebfa17c"
+    },
+    {
+      "key": "2084a84dc54b25448469787cf7a4ad19c789b9cf",
+      "name": "_Message emoji",
+      "category": "Memojis",
+      "isVariantSet": true,
+      "variants": {
+        "Emoji": [
+          "Eyes",
+          "Heart black",
+          "Heart blue",
+          "Heart brown",
+          "Heart green",
+          "Heart orange",
+          "Heart purple",
+          "Heart red",
+          "Heart white",
+          "Heart yellow",
+          "Okay",
+          "Shakas",
+          "Slight smile",
+          "Smile",
+          "Sweat smile",
+          "Thumbs down",
+          "Thumbs up",
+          "Wink"
+        ]
+      },
+      "defaultVariantName": "Emoji=Heart red",
+      "defaultVariantKey": "d8622b33b5f4ae54ee8e99037dffcff10f8ecf6e"
+    },
+    {
+      "key": "f5c8261c467242460cc1af64fb44528fc5177db8",
+      "name": "_Message emoji",
+      "category": "Memojis",
+      "isVariantSet": true,
+      "variants": {
+        "Emoji": [
+          "Eyes",
+          "Heart black",
+          "Heart blue",
+          "Heart brown",
+          "Heart green",
+          "Heart orange",
+          "Heart purple",
+          "Heart red",
+          "Heart white",
+          "Heart yellow",
+          "Okay",
+          "Shakas",
+          "Slight smile",
+          "Smile",
+          "Sweat smile",
+          "Thumbs down",
+          "Thumbs up",
+          "Wink"
+        ]
+      },
+      "defaultVariantName": "Emoji=Heart red",
+      "defaultVariantKey": "7de960243f3bae6a81118225edfd35425d77de4a"
+    },
+    {
+      "key": "f33f00bcad5207969536e51a9159dac25af1db83",
+      "name": "Menu",
+      "category": "Menu",
+      "isVariantSet": true,
+      "variants": {
+        "Property 1": [
+          "Nav Option 1",
+          "Nav Option 2"
+        ]
+      },
+      "defaultVariantName": "Property 1=Nav Option 1",
+      "defaultVariantKey": "400537ebe5d6ccdb52136941b5c184b7e81a9159"
+    },
+    {
+      "key": "fd9978ffda4e60d12b8409b4d4aa5507dc5008d6",
+      "name": "Credit card mockup",
+      "category": "Miscellaneous",
+      "isVariantSet": true,
+      "variants": {
+        "Theme": [
+          "Transparent",
+          "Transparent gradient",
+          "Primary dark",
+          "Primary light",
+          "Gray light",
+          "Gray dark",
+          "Primary light gradient",
+          "Gray light gradient",
+          "Transparent strip",
+          "Transparent gradient strip",
+          "Gray strip",
+          "Gradient strip",
+          "Salmon strip",
+          "Transparent gradient strip vertical",
+          "Gray strip vertical",
+          "Gradient strip vertical",
+          "Salmon strip vertical"
+        ],
+        "Lines": [
+          "False",
+          "True"
+        ]
+      },
+      "defaultVariantName": "Theme=Transparent, Lines=False",
+      "defaultVariantKey": "4229a935e5243dbb8bad5e0df1a5c9b8c593b502"
+    },
+    {
+      "key": "2fa261e7a62ad78629a662628e7391f2aa2afcbc",
+      "name": "Video player",
+      "category": "Miscellaneous",
+      "isVariantSet": true,
+      "variants": {
+        "Playing": [
+          "False",
+          "True"
+        ],
+        "Size": [
+          "xs",
+          "sm",
+          "md",
+          "lg",
+          "xl"
+        ]
+      },
+      "defaultVariantName": "Playing=False, Size=xs",
+      "defaultVariantKey": "9b871a9fa01f2a8d3294e4351529989ae948ea83"
+    },
+    {
+      "key": "55eb58624c74779fa5caa6e32ab4a077e9a4c1ea",
+      "name": "_Video progress",
+      "category": "Miscellaneous",
+      "isVariantSet": true,
+      "variants": {
+        "Playing": [
+          "False",
+          "True"
+        ]
+      },
+      "defaultVariantName": "Playing=False",
+      "defaultVariantKey": "0dbb58670fe046fd52acfbfbe4c6b0d43ec54194"
+    },
+    {
+      "key": "0ce61d9c4344206760bb7aa5a9ca55d7e24f9627",
+      "name": "_Play button",
+      "category": "Miscellaneous",
+      "isVariantSet": true,
+      "variants": {
+        "Size": [
+          "xs",
+          "sm",
+          "md",
+          "lg",
+          "xl",
+          "2xl"
+        ],
+        "Style": [
+          "Glassmorphism",
+          "Outline"
+        ],
+        "State": [
+          "Default",
+          "Hover"
+        ]
+      },
+      "defaultVariantName": "Size=xs, Style=Glassmorphism, State=Default",
+      "defaultVariantKey": "2a2adb4fb46b1a19464f1b5b1ad71b76bd0bf6e4"
+    },
+    {
+      "key": "d6ceb4f41da9217f9da54b0da7a0238ba2db01d5",
+      "name": "Modal",
+      "category": "Modal",
+      "isVariantSet": true,
+      "variants": {
+        "Use case": [
+          "Confirmation",
+          "Edit photo",
+          "Error",
+          "Form",
+          "Image",
+          "Learn More",
+          "Profile photo",
+          "Success"
+        ],
+        "Screen size": [
+          "Desktop",
+          "Mobile"
+        ]
+      },
+      "defaultVariantName": "Use case=Confirmation, Screen size=Desktop",
+      "defaultVariantKey": "8498b60144f7b80080e5ecab15837cf84ab22b16"
+    },
+    {
+      "key": "03d105bf6a2252e129fa55d5e0c3cefc24026320",
+      "name": "Nav-item",
+      "category": "Navigation",
+      "isVariantSet": true,
+      "variants": {
+        "Level": [
+          "Secondary",
+          "Primary"
+        ],
+        "Size": [
+          "Expanded",
+          "Collapsed"
+        ],
+        "State": [
+          "active",
+          "default",
+          "divider",
+          "hover"
+        ]
+      },
+      "defaultVariantName": "Level=Primary, Size=Expanded, State=default",
+      "defaultVariantKey": "e76280a25600509f1bf408f522ba4a19a14bfb15"
+    },
+    {
+      "key": "9a3a81f2dcdb500b1597d5c2e3553a695096377d",
+      "name": "Dropdown item",
+      "category": "Navigation",
+      "isVariantSet": true,
+      "variants": {
+        "State": [
+          "closed",
+          "open",
+          "open dropdown",
+          "open more module"
+        ],
+        "Size": [
+          "Collapsed",
+          "Expanded"
+        ]
+      },
+      "defaultVariantName": "State=closed, Size=Expanded",
+      "defaultVariantKey": "64bca032a3f6b2592bcfbfe8da7dbbe96866807f"
+    },
+    {
+      "key": "41870457a2dedce70a309c544e66f1ab363d91bd",
+      "name": "Navigation panel - web",
+      "category": "Navigation",
+      "isVariantSet": true,
+      "variants": {
+        "Property 1": [
+          "Collapsed",
+          "Expanded",
+          "Variant4",
+          "Merchant portal/expanded",
+          "Variant5",
+          "Variant7",
+          "Variant8",
+          "Variant9"
+        ]
+      },
+      "defaultVariantName": "Property 1=Expanded",
+      "defaultVariantKey": "e91af2a974e7a31354c43a652ae331e54ce8c411"
+    },
+    {
+      "key": "f4c674a382a6af906b7eec317bfe1d46ceec13a7",
+      "name": "Live switch",
+      "category": "Navigation",
+      "isVariantSet": true,
+      "variants": {
+        "Property 1": [
+          "off",
+          "on"
+        ]
+      },
+      "defaultVariantName": "Property 1=off",
+      "defaultVariantKey": "1daca10c74b7f89b9c3dc29ce89cc5278f0efe69"
+    },
+    {
+      "key": "68dc2ec701c41c13eb985be9938141bf8eebd752",
+      "name": "Settings item selector",
+      "category": "Navigation",
+      "isVariantSet": true,
+      "variants": {
+        "Property 1": [
+          "Default",
+          "Hover",
+          "Selected"
+        ]
+      },
+      "defaultVariantName": "Property 1=Selected",
+      "defaultVariantKey": "7d5e3a338fcbded94606ac46bd7c7b821088412e"
+    },
+    {
+      "key": "9a6bf39193991570997a2877c49b2b4279e8bc44",
+      "name": "Notification item",
+      "category": "Notifications",
+      "isVariantSet": true,
+      "variants": {
+        "Type": [
+          "Attachement",
+          "Attachment",
+          "Comment",
+          "Invite",
+          "Approval"
+        ],
+        "State": [
+          "New",
+          "Open",
+          "New with CTA"
+        ]
+      },
+      "defaultVariantName": "Type=Invite, State=New",
+      "defaultVariantKey": "7f84c2f965c6baecfa75e890fa3f7f665f49a79a"
+    },
+    {
+      "key": "0e97efc105e47031dc8acef8a7f3fa0e699c45d6",
+      "name": "Notification",
+      "category": "Notifications",
+      "isVariantSet": false
+    },
+    {
+      "key": "5a1fcfe9e0247f08911589c384bf71953b8ae5c8",
+      "name": "Notification types",
+      "category": "Notifications",
+      "isVariantSet": true,
+      "variants": {
+        "type": [
+          "Internal",
+          "External"
+        ]
+      },
+      "defaultVariantName": "type=External",
+      "defaultVariantKey": "5a5ff13ef96e067e798b720cc34088606ac36e7d"
+    },
+    {
+      "key": "3562c3289c3a636db1db7326dd278329042d50b9",
+      "name": "Notification",
+      "category": "Notifications",
+      "isVariantSet": false
+    },
+    {
+      "key": "e4223fcfb03e14fba230b3c28ed97a67f445dac1",
+      "name": "Notification_internal_detail",
+      "category": "Notifications",
+      "isVariantSet": false
+    },
+    {
+      "key": "0098a4066fc5bb4a845752b874a548ff861d72f7",
+      "name": "Frame 512666",
+      "category": "Notifications",
+      "isVariantSet": false
+    },
+    {
+      "key": "1ba010d2a8730822cef3f4c3c68a2b33e1212582",
+      "name": "_OTP field base",
+      "category": "OTP - WIP",
+      "isVariantSet": false
+    },
+    {
+      "key": "ac6b922d95bd712bbd2b84ad97dddd17928036b9",
+      "name": "OTP input",
+      "category": "OTP - WIP",
+      "isVariantSet": true,
+      "variants": {
+        "State": [
+          "Default",
+          "Fill",
+          "Focus"
+        ],
+        "Error": [
+          "True",
+          "False"
+        ]
+      },
+      "defaultVariantName": "State=Default, Error=False",
+      "defaultVariantKey": "fa16483cdab0ca3f16ba091dc36a0e530f3458c5"
+    },
+    {
+      "key": "9c5da0c205ea3108cf05058b14878731e6479ac7",
+      "name": "Pattern",
+      "category": "Patterns",
+      "isVariantSet": true,
+      "variants": {
+        "Property 1": [
+          "Black",
+          "Yellow"
+        ]
+      },
+      "defaultVariantName": "Property 1=Black",
+      "defaultVariantKey": "37d649f82a43226f1c774d682bd94688a504d331"
+    },
+    {
+      "key": "be81e58c9851e7aec863f8c72af603758d29a4a4",
+      "name": "Pagination/Table group actions",
+      "category": "Pagination",
+      "isVariantSet": false
+    },
+    {
+      "key": "c2989d70ddddcfbb5711be9cdb07a81a195daf26",
+      "name": "Pagination",
+      "category": "Pagination",
+      "isVariantSet": true,
+      "variants": {
+        "Property 1": [
+          "Mobile Page 2+",
+          "Page 1"
+        ]
+      },
+      "defaultVariantName": "Property 1=Page 1",
+      "defaultVariantKey": "8e8a6473aae0bdcf7f648a225c51c4908883ad2e"
+    },
+    {
+      "key": "6f9a514fe5625b3337fe1adca622fc8083dad68a",
+      "name": "Progress bar",
+      "category": "Progress bar",
+      "isVariantSet": true,
+      "variants": {
+        "Progress": [
+          "0%",
+          "10%",
+          "20%",
+          "30%",
+          "40%",
+          "50%",
+          "60%",
+          "70%",
+          "80%",
+          "90%",
+          "100%"
+        ],
+        "Label": [
+          "False",
+          "Right",
+          "Bottom",
+          "Top floating",
+          "Bottom floating"
+        ]
+      },
+      "defaultVariantName": "Progress=0%, Label=False",
+      "defaultVariantKey": "51011bf568b383ba9bbec5ca4ef6da184e638ad1"
+    },
+    {
+      "key": "b71c23dd5944ec855104d40ba75293c795ff81e1",
+      "name": "1.0 Progress Bar",
+      "category": "Progress bar",
+      "isVariantSet": true,
+      "variants": {
+        "Progress": [
+          "10%",
+          "20%",
+          "30%",
+          "40%",
+          "50%",
+          "60%",
+          "70%",
+          "80%",
+          "90%",
+          "100%"
+        ],
+        "Size": [
+          "SM",
+          "MD"
+        ],
+        "Label": [
+          "False",
+          "Right",
+          "Bottom"
+        ]
+      },
+      "defaultVariantName": "Progress=10%, Size=SM, Label=False",
+      "defaultVariantKey": "38affc2a51eba90592e61ba2fd729195889ee1d6"
+    },
+    {
+      "key": "ff8d7bd560bf4aa31ed4a02589f6f6e4ab4ed11c",
+      "name": "2.0 Progress Circle",
+      "category": "Progress bar",
+      "isVariantSet": true,
+      "variants": {
+        "Size": [
+          "SM",
+          "MD",
+          "LG"
+        ],
+        "Status": [
+          "Default",
+          "Success",
+          "Warning",
+          "Danger"
+        ]
+      },
+      "defaultVariantName": "Size=MD, Status=Default",
+      "defaultVariantKey": "66c370dbaf7b5ceee4e6c8370966d8903ae71fd0"
+    },
+    {
+      "key": "5684c0c69b1d0a058afa27f33c3277313cfb5ab6",
+      "name": "3.0 Progress Half Circle",
+      "category": "Progress bar",
+      "isVariantSet": true,
+      "variants": {
+        "Size": [
+          "SM",
+          "MD",
+          "LG"
+        ],
+        "Status": [
+          "Default",
+          "Success",
+          "Warning",
+          "Danger"
+        ]
+      },
+      "defaultVariantName": "Size=MD, Status=Default",
+      "defaultVariantKey": "efedc27f88aeb25a02853ec74a8302c168814154"
+    },
+    {
+      "key": "7c62cd1033d08f91286d02f02dd3b2f674797578",
+      "name": "Radio",
+      "category": "Radio - Review",
+      "isVariantSet": true,
+      "variants": {
+        "label": [
+          "true",
+          "false"
+        ],
+        "description": [
+          "true",
+          "false"
+        ],
+        "checked": [
+          "true",
+          "false"
+        ],
+        "state": [
+          "none",
+          "focus",
+          "disabled",
+          "hover"
+        ]
+      },
+      "defaultVariantName": "label=true, description=false, checked=false, state=none",
+      "defaultVariantKey": "648f7ae3a1c52c13fddba433a9d395ac253aa3ec"
+    },
+    {
+      "key": "c75903f53b8b740619467ef436969a64e394b482",
+      "name": "_Scrollbar",
+      "category": "Scroll",
+      "isVariantSet": true,
+      "variants": {
+        "State": [
+          "Default",
+          "Hover"
+        ],
+        "↘️ Direction": [
+          "Horizontal",
+          "Vertical"
+        ]
+      },
+      "defaultVariantName": "State=Default, ↘️ Direction=Vertical",
+      "defaultVariantKey": "62baa0be97b7aa19206784f8690aea52fbd4595f"
+    },
+    {
+      "key": "3a36cbc1755bfd8160b23a0f3d1d1b07499276b3",
+      "name": "Search",
+      "category": "Search",
+      "isVariantSet": true,
+      "variants": {
+        "Search": [
+          "Default",
+          "Active"
+        ]
+      },
+      "defaultVariantName": "Search=Default",
+      "defaultVariantKey": "7db3f43fbc840753b4e23004b4251e8015d4e6ce"
+    },
+    {
+      "key": "ab5f4125deb822078ab0e65fee16c277e649f320",
+      "name": "Drawer",
+      "category": "Side panels",
+      "isVariantSet": true,
+      "variants": {
+        "Group button": [
+          "Vertical",
+          "None",
+          "Horizontal"
+        ]
+      },
+      "defaultVariantName": "Group button=Vertical",
+      "defaultVariantKey": "791c4e876a0fad0a1b1e462ba140978216f2f697"
+    },
+    {
+      "key": "61c3eb46c7ba37ab6ea5a0d27c2b89e56b40410e",
+      "name": "Email Signature",
+      "category": "Signatures",
+      "isVariantSet": true,
+      "variants": {
+        "Version": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ]
+      },
+      "defaultVariantName": "Version=1",
+      "defaultVariantKey": "0b2fd5e0552366c9d7f1ce908960e68c99dbf1b4"
+    },
+    {
+      "key": "2baaff8d3ae30d45689f56866beeea88c7d0689a",
+      "name": "Slider",
+      "category": "Sliders",
+      "isVariantSet": true,
+      "variants": {
+        "Label": [
+          "False",
+          "Bottom",
+          "Bottom floating",
+          "Top floating"
+        ],
+        "Right control": [
+          "25%",
+          "50%",
+          "75%",
+          "100%"
+        ],
+        "Left control": [
+          "0%",
+          "25%",
+          "50%",
+          "75%"
+        ]
+      },
+      "defaultVariantName": "Label=False, Right control=25%, Left control=0%",
+      "defaultVariantKey": "1b426e2899fd3de9686c4a61fd9e465e56be7f80"
+    },
+    {
+      "key": "af8599fde175edadbf356e51fb64ed5e812e466d",
+      "name": ".Ghost / _handle",
+      "category": "Sliders",
+      "isVariantSet": true,
+      "variants": {
+        "Status": [
+          "Default",
+          "Hover",
+          "Focus",
+          "Disable"
+        ]
+      },
+      "defaultVariantName": "Status=Default",
+      "defaultVariantKey": "253ae6da7cb0f3b0b5c4b0939251a7c3ff46c91c"
+    },
+    {
+      "key": "3cfeac34ab4a89518466ef2aa9d85891cbdd31d0",
+      "name": "1.0 Slider",
+      "category": "Sliders",
+      "isVariantSet": true,
+      "variants": {
+        "Progress": [
+          "10%",
+          "20%",
+          "30%",
+          "40%",
+          "50%",
+          "60%",
+          "70%",
+          "80%",
+          "90%",
+          "100%"
+        ],
+        "Label": [
+          "False",
+          "Tags",
+          "Numbers",
+          "Texts"
+        ]
+      },
+      "defaultVariantName": "Progress=10%, Label=False",
+      "defaultVariantKey": "9e7ce8ccb0b18ae6a98323afe1192d1cb705ca26"
+    },
+    {
+      "key": "b1eff48733ab7fe71a4c396fe76272989ac64326",
+      "name": "1.1 Range Slider",
+      "category": "Sliders",
+      "isVariantSet": true,
+      "variants": {
+        "Progress": [
+          "0-25",
+          "0-50",
+          "0-75",
+          "0-100",
+          "25-100",
+          "25-75",
+          "25-50",
+          "50-75",
+          "50-100",
+          "75-100"
+        ],
+        "Label": [
+          "False",
+          "Tags",
+          "Numbers",
+          "Texts"
+        ]
+      },
+      "defaultVariantName": "Progress=0-25, Label=False",
+      "defaultVariantKey": "622919295523370050c52b9346f9c1854c107e66"
+    },
+    {
+      "key": "bfff28f55ca2701df6b41dadf1557a0ea7671b5d",
+      "name": "Step",
+      "category": "Stepper",
+      "isVariantSet": true,
+      "variants": {
+        "Theme": [
+          "Light"
+        ],
+        "Size": [
+          "Large",
+          "Medium"
+        ],
+        "State": [
+          "Incomplete",
+          "Current",
+          "Completed",
+          "Failed"
+        ]
+      },
+      "defaultVariantName": "Theme=Light, Size=Large, State=Incomplete",
+      "defaultVariantKey": "ddd34100f226f8e9821787c322dd95b7c9fbfcc8"
+    },
+    {
+      "key": "4cb7e293e2c81404d9b4eee6533437173ed43ec7",
+      "name": "_Step Marker - Base",
+      "category": "Stepper",
+      "isVariantSet": true,
+      "variants": {
+        "Size": [
+          "Large",
+          "Medium"
+        ],
+        "State": [
+          "Completed",
+          "Current",
+          "Incomplete",
+          "Failed"
+        ]
+      },
+      "defaultVariantName": "Size=Large, State=Incomplete",
+      "defaultVariantKey": "8b851bb5a405cbbfc75d817fc3e788c1fc1622fe"
+    },
+    {
+      "key": "29bc52a874fbcfcc8613c2351c857411955964b8",
+      "name": "_Step - Base",
+      "category": "Stepper",
+      "isVariantSet": true,
+      "variants": {
+        "Size": [
+          "Large",
+          "Medium"
+        ]
+      },
+      "defaultVariantName": "Size=Large",
+      "defaultVariantKey": "9e1bcd79e20e9def36df76e505f9ef93cbf880d7"
+    },
+    {
+      "key": "7b24465615b9305178aa615ec181f81e9a4004a3",
+      "name": "_Switch",
+      "category": "Switch/Toggle",
+      "isVariantSet": true,
+      "variants": {
+        "Pressed": [
+          "False",
+          "True"
+        ],
+        "Size": [
+          "sm",
+          "md"
+        ],
+        "Theme": [
+          "Light",
+          "Dark"
+        ],
+        "State": [
+          "Default",
+          "Hover",
+          "Focus",
+          "Disabled"
+        ]
+      },
+      "defaultVariantName": "Pressed=False, Size=sm, Theme=Dark, State=Default",
+      "defaultVariantKey": "f9b25028120ff046155f2e23199db096e5f86283"
+    },
+    {
+      "key": "928c99114ebdfc2d1aaec30366a24fb31a10bc0c",
+      "name": "Switch",
+      "category": "Switch/Toggle",
+      "isVariantSet": true,
+      "variants": {
+        "Pressed": [
+          "False",
+          "True"
+        ],
+        "Size": [
+          "sm",
+          "md"
+        ],
+        "Text": [
+          "True",
+          "False"
+        ],
+        "Supporting text": [
+          "False",
+          "True"
+        ],
+        "State": [
+          "Default",
+          "Hover",
+          "Focus",
+          "Disabled"
+        ],
+        "Theme": [
+          "Light"
+        ]
+      },
+      "defaultVariantName": "Pressed=False, Size=sm, Text=False, Supporting text=False, State=Default, Theme=Light",
+      "defaultVariantKey": "43e6d874f03b26fd6aea20381701f316628386ea"
+    },
+    {
+      "key": "69a090f439c663d18f4d6c45e3db7a12b61d0355",
+      "name": "Tab group",
+      "category": "Tab",
+      "isVariantSet": true,
+      "variants": {
+        "Number of tabs": [
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7"
+        ]
+      },
+      "defaultVariantName": "Number of tabs=2",
+      "defaultVariantKey": "3ecbb4235c482379844c0ee772c5fe6dff941d54"
+    },
+    {
+      "key": "e79f02139cef3a33b58322dfd0db695609165c0d",
+      "name": "Tab item",
+      "category": "Tab",
+      "isVariantSet": true,
+      "variants": {
+        "State": [
+          "Active",
+          "Default",
+          "Hover"
+        ]
+      },
+      "defaultVariantName": "State=Default",
+      "defaultVariantKey": "be1e5aadd4f4111ab704163e1778d7eb66270a69"
+    },
+    {
+      "key": "5325e8de6c02bef277efc003f81fecacdf59aec2",
+      "name": "Table item",
+      "category": "Tables",
+      "isVariantSet": true,
+      "variants": {
+        "Item type": [
+          "Header",
+          "Table",
+          "Badge",
+          "Avatar counter",
+          "Progress bar",
+          "Actionable icons",
+          "Action text",
+          "Rating",
+          "Status",
+          "Button",
+          "Entry with selection",
+          "Entry no selection",
+          "Entry only"
+        ],
+        "Alignment": [
+          "Left",
+          "Right"
+        ],
+        "Lines": [
+          "Duo",
+          "Single"
+        ]
+      },
+      "defaultVariantName": "Item type=Header, Alignment=Left, Lines=Single",
+      "defaultVariantKey": "635109c3e4a4d91557a8acb5adbdb99d2cb84434"
+    },
+    {
+      "key": "617c08fbf0d48094af8f8ea6d6246c70a6fcf642",
+      "name": "Table summary",
+      "category": "Tables",
+      "isVariantSet": false
+    },
+    {
+      "key": "83d9fb79a817490fc1208c9518eb7f6b23c712e1",
+      "name": "Filter",
+      "category": "Tables",
+      "isVariantSet": true,
+      "variants": {
+        "Property 1": [
+          "Date",
+          "Form input",
+          "Checkbox",
+          "Radio",
+          "Variant5",
+          "Variant6"
+        ]
+      },
+      "defaultVariantName": "Property 1=Date",
+      "defaultVariantKey": "07cf1fffa890db16b7c7f324584647b054cf805e"
+    },
+    {
+      "key": "b6642ff7930bcb2bd8bf5c216a4658d246824c27",
+      "name": "Table",
+      "category": "Tables",
+      "isVariantSet": true,
+      "variants": {
+        "Table Type": [
+          "Horizontal scroll",
+          "No scroll",
+          "Empty state"
+        ]
+      },
+      "defaultVariantName": "Table Type=No scroll",
+      "defaultVariantKey": "2fbb2317174b21a69834b23abd91e9a7d6f2cb3c"
+    },
+    {
+      "key": "d73435f33c06c994419698eb738534475439b89a",
+      "name": "Search & filter",
+      "category": "Tables",
+      "isVariantSet": false
+    },
+    {
+      "key": "60c491b51903f1e2c4e8ffdb0a7c4572adba25e0",
+      "name": "Filter tab item",
+      "category": "Tables",
+      "isVariantSet": true,
+      "variants": {
+        "State": [
+          "Active",
+          "Default",
+          "Selected"
+        ]
+      },
+      "defaultVariantName": "State=Active",
+      "defaultVariantKey": "43224c6ab7d568b8870c90583eb1108ab4770231"
+    },
+    {
+      "key": "ae876b221862bb07970d45e28d3c61d0a6db0cde",
+      "name": "Column Sort",
+      "category": "Tables",
+      "isVariantSet": true,
+      "defaultVariantName": "Property 1=Sort, Property 2=Assending",
+      "defaultVariantKey": "8bf6a1b8216b3e3d22d752bed66d1a299a45ca32"
+    },
+    {
+      "key": "b37f747bcb5ef9ee4c28e06898dc595927aa58ed",
+      "name": "Mobile Filter+Search/search open",
+      "category": "Tables",
+      "isVariantSet": false
+    },
+    {
+      "key": "af00df8a62d0fc4b19395e4542adbaf9bf65d0c4",
+      "name": "Filter types",
+      "category": "Tables",
+      "isVariantSet": true,
+      "variants": {
+        "Property 1": [
+          "Date",
+          "Input",
+          "Amount",
+          "Checkbox",
+          "Radio"
+        ],
+        "Property 2": [
+          "Collapsed",
+          "Expanded"
+        ]
+      },
+      "defaultVariantName": "Property 1=Date, Property 2=Collapsed",
+      "defaultVariantKey": "25b2cececcb81f918a123fe43cb4a8f3890ad536"
+    },
+    {
+      "key": "442662458b5df73464ff3aa65cd90d399905511d",
+      "name": "Table item",
+      "category": "Tables",
+      "isVariantSet": true,
+      "variants": {
+        "Property 1": [
+          "Default",
+          "Selected"
+        ]
+      },
+      "defaultVariantName": "Property 1=Default",
+      "defaultVariantKey": "d63370b19104162bed0a48eb5072835007407b50"
+    },
+    {
+      "key": "fb6d14698b3ec266e4aafd7018a1de28bd7ae725",
+      "name": "1.0 Link Primary",
+      "category": "Text Link",
+      "isVariantSet": true,
+      "variants": {
+        "State": [
+          "Default",
+          "Hover",
+          "Focus",
+          "Active",
+          "Disable"
+        ],
+        "Size": [
+          "SM",
+          "MD"
+        ]
+      },
+      "defaultVariantName": "State=Default, Size=SM",
+      "defaultVariantKey": "32e57c7ba6dea23d30c2c52d3e3565a739022ca3"
+    },
+    {
+      "key": "43c8a447ddbaaf69df37a6b19d93340e0bd0d71d",
+      "name": "1.1 Link Secondary",
+      "category": "Text Link",
+      "isVariantSet": true,
+      "variants": {
+        "State": [
+          "Default",
+          "Hover",
+          "Focus",
+          "Active",
+          "Disable"
+        ],
+        "Size": [
+          "SM",
+          "MD"
+        ]
+      },
+      "defaultVariantName": "State=Default, Size=SM",
+      "defaultVariantKey": "38e6f69b3bc94cd32adbe51337ce6c6785db7335"
+    },
+    {
+      "key": "d46b7771eb7f364fefac512186efe470e527b216",
+      "name": "1.2 Link Danger",
+      "category": "Text Link",
+      "isVariantSet": true,
+      "variants": {
+        "State": [
+          "Default",
+          "Hover",
+          "Focus",
+          "Active",
+          "Disable"
+        ],
+        "Size": [
+          "SM",
+          "MD"
+        ]
+      },
+      "defaultVariantName": "State=Default, Size=SM",
+      "defaultVariantKey": "80ce0764f34e17e236eab77b518250e60a238953"
+    },
+    {
+      "key": "7c2c8e44ab13ce1b4d5b31b87453f00fcaf3fe34",
+      "name": "Navigation panel - web",
+      "category": "---->Power BI (Rep)",
+      "isVariantSet": true,
+      "variants": {
+        "Property 1": [
+          "Default",
+          "Variant2"
+        ]
+      },
+      "defaultVariantName": "Property 1=Default",
+      "defaultVariantKey": "0b156c9f2d9cafbbdf8708d7cf67c0132ef46782"
+    },
+    {
+      "key": "3658094d7b6274523bb8738a0c7c76ecf500d091",
+      "name": "Filter",
+      "category": "---->Power BI (Rep)",
+      "isVariantSet": true,
+      "variants": {
+        "Property 1": [
+          "Date",
+          "Keyword",
+          "Amount",
+          "Channel",
+          "Account",
+          "Status",
+          "Attachment"
+        ]
+      },
+      "defaultVariantName": "Property 1=Date",
+      "defaultVariantKey": "81c6be79a550a90dee73474a62e57b8e3d4c9416"
+    },
+    {
+      "key": "0e0e65458705769afb0204a5429903aabf042959",
+      "name": "Toast",
+      "category": "Toast",
+      "isVariantSet": true,
+      "variants": {
+        "Size": [
+          "Mobile",
+          "Desktop"
+        ],
+        "Message type": [
+          "Success",
+          "Error"
+        ]
+      },
+      "defaultVariantName": "Size=Desktop, Message type=Success",
+      "defaultVariantKey": "a53d7ae53a1dbf68f0e337098876aeece1345650"
+    },
+    {
+      "key": "7bf389d135b2dd2798c2201855b1313c2d7ce5c5",
+      "name": "Tooltip",
+      "category": "Tooltips",
+      "isVariantSet": true,
+      "variants": {
+        "Supporting text": [
+          "False",
+          "True"
+        ],
+        "Theme": [
+          "Dark",
+          "Light"
+        ],
+        "Arrow": [
+          "None",
+          "Bottom left",
+          "Bottom right",
+          "Left",
+          "Right",
+          "Bottom center",
+          "Top center"
+        ]
+      },
+      "defaultVariantName": "Supporting text=False, Theme=Light, Arrow=None",
+      "defaultVariantKey": "e25b6153503354c93b979feed62fb028f88e140a"
+    },
+    {
+      "key": "edd88618da4533703f2428b39e1f1b807f42cefd",
+      "name": "Help icon",
+      "category": "Tooltips",
+      "isVariantSet": true,
+      "variants": {
+        "Open": [
+          "False",
+          "True"
+        ],
+        "Supporting text": [
+          "False",
+          "True"
+        ],
+        "Tooltip": [
+          "Top no arrow",
+          "Top arrow",
+          "Left",
+          "Top left",
+          "Bottom",
+          "Right",
+          "Top right"
+        ]
+      },
+      "defaultVariantName": "Open=False, Supporting text=False, Tooltip=Top no arrow",
+      "defaultVariantKey": "45c704a5cb795862e16b151ca286854bf89dc9df"
+    },
+    {
+      "key": "3e8abeec1abf0fb62b0e05816580a3e303a810fa",
+      "name": "Top bar",
+      "category": "Top Bar - Review",
+      "isVariantSet": true,
+      "variants": {
+        "Small screen": [
+          "False",
+          "True"
+        ],
+        "Width": [
+          "🖥 max-width",
+          "🖥 min-width",
+          "📱 360",
+          "📱 768",
+          "📱 568"
+        ]
+      },
+      "defaultVariantName": "Small screen=False, Width=🖥 min-width",
+      "defaultVariantKey": "8f81f77bbfabe61ff5933e6d00988fdec833959e"
+    },
+    {
+      "key": "3f96772aa432c285eec937acc7b024b7b72db8fa",
+      "name": "Upload_Component Style 1",
+      "category": "Upload",
+      "isVariantSet": true,
+      "variants": {
+        "Property 1": [
+          "Default",
+          "uploading",
+          "Failed",
+          "sucessful",
+          "Multiple upload",
+          "Default error",
+          "Variant7"
+        ]
+      },
+      "defaultVariantName": "Property 1=Default",
+      "defaultVariantKey": "2f5d9320d76f01511c2a3a4c10ec55cc4e465ea5"
+    },
+    {
+      "key": "7995b7bec0c843a05af976049c91b061a6e3fbf9",
+      "name": "file type",
+      "category": "Upload",
+      "isVariantSet": true,
+      "variants": {
+        "Property 1": [
+          "AI",
+          "CSS",
+          "DOC",
+          "GIF",
+          "HTML",
+          "JAVA",
+          "JPG",
+          "PNG",
+          "PPT",
+          "SVG",
+          "TXT",
+          "XLS",
+          "ZIP",
+          "pdf",
+          "CSV"
+        ]
+      },
+      "defaultVariantName": "Property 1=pdf",
+      "defaultVariantKey": "fa8b53223b1e4af303a7f8b758ab001ffcbfe613"
+    }
+  ]
+}

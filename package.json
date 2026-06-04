@@ -1,0 +1,20 @@
+{
+  "name": "@poseidon/workspace",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Poseidon — Hydrogen Design System Figma copilot. Workspace root.",
+  "type": "module",
+  "workspaces": ["bridge", "plugin"],
+  "scripts": {
+    "scan:tokens": "tsx scripts/sync-tokens.ts",
+    "scan:skills": "tsx scripts/sync-skills.ts",
+    "scan:components": "echo 'Open Hydrogen DS in Figma + paperclip bridge, then run SCAN_COMPONENTS_PAYLOAD via figma_execute. See scripts/README.md.' && exit 1",
+    "scan:templates": "echo 'Open Hydrogen DS in Figma + paperclip bridge, then run SCAN_TEMPLATES_PAYLOAD via figma_execute. See scripts/README.md.' && exit 1",
+    "scan:all": "pnpm scan:tokens && pnpm scan:components && pnpm scan:templates",
+    "bridge:dev": "pnpm --filter @poseidon/bridge dev",
+    "plugin:dev": "pnpm --filter @poseidon/plugin dev"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.2"
+  }
+}
