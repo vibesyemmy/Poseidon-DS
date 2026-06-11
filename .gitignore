@@ -39,4 +39,5 @@ credentials*
 # Test
 coverage/
 
-# Figma plugin published bundle is in dist/ — handled above
+# Project routing (not part of Poseidon repo — local Claude context)
+CLAUDE.md
