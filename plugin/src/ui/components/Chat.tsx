@@ -9,13 +9,29 @@
  * Phase 4.10-4.12.
  */
 
-import { useEffect, useMemo, useRef, useState } from "preact/hooks";
+import { useEffect, useMemo, useReducer, useRef, useState } from "preact/hooks";
 
 import { sendChat, postToolResponse, type ToolRequestEvent } from "../lib/chatClient.ts";
 import { onSandbox, sendToSandbox } from "../lib/sandboxBridge.ts";
 import { BridgeClient } from "../lib/bridgeClient.ts";
 import { TemplatePicker } from "./TemplatePicker.tsx";
 import { ComponentPicker } from "./ComponentPicker.tsx";
+
+// STEP 3 — template-first UI (ENFORCEMENT.md)
+import {
+  composerReducer,
+  initialComposerState,
+} from "../state/composer.ts";
+import { TemplateFirstPill } from "./TemplateFirstPill.tsx";
+import { MatchedTemplateCard } from "./MatchedTemplateCard.tsx";
+import { NoMatchCard } from "./NoMatchCard.tsx";
+import { ComposeFromAtomsConfirmModal } from "./ComposeFromAtomsConfirmModal.tsx";
+import type {
+  NoMatchProposal,
+  TemplateProposal,
+} from "../../shared/messages.ts";
+import { approveProposal } from "../../bridge/mutation-watcher.ts";
+import { logAudit } from "../../audit/logger.ts";
 
 interface AssistantTextBlock {
   kind: "assistant-text";
@@ -63,6 +79,73 @@ export function Chat({ sessionId }: Props): preact.JSX.Element {
   const bridgeRef = useRef(new BridgeClient());
 
   const [picker, setPicker] = useState<"templates" | "components" | null>(null);
+
+  // STEP 3 — composer state machine for template-first UI.
+  const [composer, dispatchComposer] = useReducer(composerReducer, initialComposerState);
+
+  // Tick composer once a minute so TEMPLATE_FIRST_OFF_TEMPORARY auto-reverts.
+  useEffect(() => {
+    const t = setInterval(() => dispatchComposer({ type: "TICK", now: Date.now() }), 60_000);
+    return () => clearInterval(t);
+  }, []);
+
+  // Detect gated-tool results in the message stream and drive the composer.
+  useEffect(() => {
+    if (blocks.length === 0) return;
+    // Walk newest → oldest to find the latest interesting tool block.
+    for (let i = blocks.length - 1; i >= 0; i--) {
+      const b = blocks[i];
+      if (b.kind !== "tool-call" || b.output === undefined) continue;
+      const name = stripMcpPrefix(b.name);
+      const out = b.output as { ok?: boolean; value?: unknown } | undefined;
+      if (!out?.ok) continue;
+      const val = out.value as Record<string, unknown> | undefined;
+      const input = b.input as Record<string, unknown> | undefined;
+
+      if (name === "templates_choose") {
+        const variantKey = String(val?.variantKey ?? input?.variantKey ?? "");
+        if (!variantKey) return;
+        const proposal: TemplateProposal = {
+          proposalId: b.toolUseId,
+          intent: typeof input?.reason === "string" ? input.reason : "(no intent captured)",
+          variantKey,
+          variantName: String(val?.name ?? variantKey),
+          family: detectFamilyFromKey(variantKey),
+          useWhen: "(See 03-templates.md → Registry for full Use-when line.)",
+          dontUseWhen: "(See 03-templates.md → Registry for full Don't-use-when line.)",
+          score: 1,
+        };
+        dispatchComposer({ type: "PROPOSAL_MATCHED", proposal });
+        return;
+      }
+
+      if (name === "escape_no_template_match") {
+        const considered = Array.isArray(input?.considered) ? input.considered : [];
+        const noMatch: NoMatchProposal = {
+          proposalId: b.toolUseId,
+          intent: String(input?.intent ?? "(no intent captured)"),
+          rationale: String(input?.rationale ?? ""),
+          considered: considered.slice(0, 3).map((c: Record<string, unknown>) => ({
+            proposalId: String(c.variantKey ?? ""),
+            intent: "",
+            variantKey: String(c.variantKey ?? ""),
+            variantName: String(c.name ?? c.variantKey ?? ""),
+            family: (c.family as TemplateProposal["family"]) ?? "List",
+            useWhen: String(c.useWhen ?? ""),
+            dontUseWhen: String(c.dontUseWhen ?? ""),
+            score: typeof c.score === "number" ? c.score : 0,
+          })),
+        };
+        dispatchComposer({ type: "PROPOSAL_NO_MATCH", proposal: noMatch });
+        return;
+      }
+
+      if (name === "screen_from_template" || name === "screen_compose_from_atoms") {
+        dispatchComposer({ type: "MUTATION_COMPLETE" });
+        return;
+      }
+    }
+  }, [blocks]);
 
   // ─── Sandbox tool-result listener ────────────────────────────────────
   //
@@ -421,8 +504,73 @@ export function Chat({ sessionId }: Props): preact.JSX.Element {
         {error && <p style={errorStyle}>Error: {error}</p>}
       </div>
 
+      {/* STEP 3 — Inline template-first cards rendered above composer */}
+      {composer.phase === "AWAITING_DECISION" && composer.matched && (
+        <MatchedTemplateCard
+          proposal={composer.matched}
+          defeatReflexive={false}
+          onAccept={() => {
+            approveProposal(composer.matched!.proposalId);
+            void logAudit({
+              timestamp: new Date().toISOString(),
+              sessionId: sessionId ?? "unknown",
+              intentText: composer.matched!.intent,
+              proposedTemplateId: composer.matched!.proposalId,
+              proposedVariant: composer.matched!.variantKey,
+              decision: "accept",
+              mutationProposalId: composer.matched!.proposalId,
+            });
+            dispatchComposer({ type: "ACCEPT" });
+          }}
+          onPickDifferent={() => dispatchComposer({ type: "PICK_DIFFERENT" })}
+          onNoMatch={() => dispatchComposer({ type: "CANCEL" })}
+        />
+      )}
+      {composer.phase === "AWAITING_DECISION" && composer.noMatch && (
+        <NoMatchCard
+          proposal={composer.noMatch}
+          onUseAnyway={(variantKey) => {
+            void logAudit({
+              timestamp: new Date().toISOString(),
+              sessionId: sessionId ?? "unknown",
+              intentText: composer.noMatch!.intent,
+              proposedVariant: variantKey,
+              decision: "pick_different",
+            });
+            dispatchComposer({ type: "CANCEL" });
+          }}
+          onComposeFromAtoms={() => dispatchComposer({ type: "REQUEST_COMPOSE" })}
+          onRefineIntent={() => dispatchComposer({ type: "CANCEL" })}
+          onAddNewTemplate={() => dispatchComposer({ type: "CANCEL" })}
+        />
+      )}
+      {composer.phase === "AWAITING_COMPOSE_CONFIRM" && composer.noMatch && (
+        <ComposeFromAtomsConfirmModal
+          overrideCount={composer.overrideCount}
+          onConfirm={() => {
+            approveProposal(composer.noMatch!.proposalId);
+            void logAudit({
+              timestamp: new Date().toISOString(),
+              sessionId: sessionId ?? "unknown",
+              intentText: composer.noMatch!.intent,
+              decision: "compose_override",
+              overrideReason: "designer typed CONFIRM",
+              mutationProposalId: composer.noMatch!.proposalId,
+            });
+            dispatchComposer({ type: "CONFIRM_COMPOSE" });
+          }}
+          onCancel={() => dispatchComposer({ type: "CANCEL" })}
+        />
+      )}
+
       <footer style={composerStyle}>
         <div style={chipsRowStyle}>
+          <TemplateFirstPill
+            mode={composer.mode}
+            modeRevertAt={composer.modeRevertAt}
+            onToggleOff={() => dispatchComposer({ type: "TOGGLE_TEMPLATE_FIRST_OFF_30MIN" })}
+            onToggleOn={() => dispatchComposer({ type: "TOGGLE_TEMPLATE_FIRST_ON" })}
+          />
           <button
             type="button"
             style={chipStyle}
@@ -695,6 +843,15 @@ function AskUserCard({
       )}
     </div>
   );
+}
+
+function detectFamilyFromKey(variantKey: string): TemplateProposal["family"] {
+  if (variantKey.startsWith("page.list.")) return "List";
+  if (variantKey.startsWith("page.detail.")) return "Detail";
+  if (variantKey.startsWith("page.form.")) return "Form";
+  if (variantKey.startsWith("page.onboarding.")) return "Onboarding";
+  if (variantKey.startsWith("page.settings.")) return "Settings";
+  return "List";
 }
 
 function stripMcpPrefix(name: string): string {

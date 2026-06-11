@@ -134,28 +134,32 @@ export async function handleChat(c: Context, deps: ChatDeps) {
         systemPrompt,
         mcpServers: { poseidon: mcpServer },
         allowedTools: [
+          // Read-only / non-screen tools — always allowed.
           "mcp__poseidon__list_templates",
           "mcp__poseidon__list_components",
-          "mcp__poseidon__insert_template",
-          "mcp__poseidon__insert_component",
-          "mcp__poseidon__emit_recipe",
-          "mcp__poseidon__modify_node",
-          "mcp__poseidon__swap_theme",
-          "mcp__poseidon__swap_density",
           "mcp__poseidon__read_selection",
           "mcp__poseidon__get_canvas_state",
-          "mcp__poseidon__figma_execute",
           "mcp__poseidon__get_styles",
           "mcp__poseidon__get_variables",
           "mcp__poseidon__capture_screenshot",
           "mcp__poseidon__ask_user",
           "mcp__poseidon__capture_template",
-          // STEP 2 — template-first tool-gate
+          "mcp__poseidon__swap_theme",
+          "mcp__poseidon__swap_density",
+          // STEP 2 — template-first tool-gate (the ONLY exposed screen-creation path).
           "mcp__poseidon__templates_suggest",
           "mcp__poseidon__templates_choose",
           "mcp__poseidon__screen_from_template",
           "mcp__poseidon__escape_no_template_match",
           "mcp__poseidon__screen_compose_from_atoms",
+          // Component-level edits — bypass the screen gate; still bound by skill rule.
+          "mcp__poseidon__insert_component",
+          "mcp__poseidon__modify_node",
+          // NOTE: insert_template, emit_recipe, figma_execute are intentionally
+          // OMITTED from allowedTools. The gated screen.* tools delegate to
+          // insert_template / emit_recipe internally via the router so the
+          // bridge can still build screens — Claude just can't bypass the gate
+          // by calling them directly.
         ],
         // Disable built-in Claude Code tools; Poseidon exposes its own.
         tools: [],
