@@ -29,6 +29,14 @@ import { defaultQueryOptions, importSdk } from "./agentSdk.ts";
 import { buildSkillSystemPrompt, type Skill } from "./skills.ts";
 import { buildPoseidonMcpServer } from "./tools.ts";
 import { ToolRouter, registerRouter, unregisterRouter } from "./toolRouter.ts";
+import { TEMPLATE_FIRST_RULE } from "./prompts/template-first-rule.ts";
+import {
+  isScreenCreationTool,
+  logAudit,
+  parsePreamble,
+  stripMcpPrefix,
+  summarizeToolArgs,
+} from "./templateCheck.ts";
 
 export interface ChatRequest {
   prompt: string;
@@ -109,9 +117,15 @@ export async function handleChat(c: Context, deps: ChatDeps) {
       const mcpServer = buildPoseidonMcpServer(router);
 
       const skillPrompt = buildSkillSystemPrompt(deps.skills);
-      const systemPrompt = skillPrompt
-        ? `${SYSTEM_PROMPT_BASE}\n\n${skillPrompt}`
-        : SYSTEM_PROMPT_BASE;
+      // Append the template-first hard rule LAST so it has the strongest
+      // recency weight against long histories. STEP 1 of ENFORCEMENT.md.
+      const systemPrompt = [
+        SYSTEM_PROMPT_BASE,
+        skillPrompt,
+        TEMPLATE_FIRST_RULE,
+      ]
+        .filter(Boolean)
+        .join("\n\n");
 
       const opts = defaultQueryOptions({
         ...(body.model ? { model: body.model } : {}),
@@ -152,10 +166,66 @@ export async function handleChat(c: Context, deps: ChatDeps) {
 
       const it = sdk.query({ prompt: body.prompt, options: opts });
 
+      // STEP 1 telemetry — accumulate assistant text + tool calls this stream.
+      let assistantTextSoFar = "";
+      let templatesSuggestCalledThisStream = false;
+      let escapeUsedThisStream = false;
+
       for await (const msg of it) {
         if (msg.type === "result" && msg.subtype === "success") {
           totalCostUsd += msg.total_cost_usd ?? 0;
         }
+
+        // Mine the message for text blocks + tool_use blocks for audit.
+        // SDK assistant messages typically have shape:
+        //   { type: "assistant", message: { content: [{ type: "text"|"tool_use", ... }] } }
+        try {
+          const inner = (msg as { message?: { content?: unknown[] } })?.message;
+          const content = Array.isArray(inner?.content) ? inner!.content : [];
+          for (const block of content) {
+            const b = block as { type?: string; text?: string; name?: string; input?: unknown };
+            if (b.type === "text" && typeof b.text === "string") {
+              assistantTextSoFar += "\n" + b.text;
+            } else if (b.type === "tool_use" && typeof b.name === "string") {
+              const tool = stripMcpPrefix(b.name);
+              if (tool === "list_templates" || tool === "templates_suggest") {
+                templatesSuggestCalledThisStream = true;
+              }
+              if (tool === "ask_user") {
+                escapeUsedThisStream = true;
+              }
+              if (isScreenCreationTool(tool)) {
+                const preamble = parsePreamble(assistantTextSoFar);
+                const preamblePresent = preamble !== null;
+                const variantNone =
+                  preamble?.variantKey.toLowerCase() === "none";
+                await logAudit({
+                  timestamp: new Date().toISOString(),
+                  sessionId: body.sessionId,
+                  streamId: router.id,
+                  toolName: tool,
+                  preamblePresent,
+                  preambleIntent: preamble?.intent,
+                  preambleVariantKey: preamble?.variantKey,
+                  templatesSuggestCalled: templatesSuggestCalledThisStream,
+                  escapeUsed: escapeUsedThisStream || variantNone,
+                  silentComposeAttempted:
+                    !preamblePresent ||
+                    (variantNone && !escapeUsedThisStream),
+                  forcedInjectionFired: false, // STEP 2 will populate this.
+                  toolArgsSummary: summarizeToolArgs(b.input),
+                });
+              }
+            }
+          }
+        } catch (auditErr) {
+          // Auditing must never break the chat stream.
+          console.warn(
+            "[poseidon] template-check audit error:",
+            (auditErr as Error).message,
+          );
+        }
+
         await stream.writeSSE({ event: "message", data: JSON.stringify(msg) });
       }
 
