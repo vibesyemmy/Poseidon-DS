@@ -184,6 +184,34 @@ app.post("/chat", (c) =>
   }),
 );
 
+// ─── /audit ─────────────────────────────────────────────────────────────
+//
+// STEP 3 — plugin POSTs TemplateAuditEntry rows here. Bridge appends to
+// ~/.poseidon/audit.jsonl (or POSEIDON_AUDIT_PATH override).
+app.post("/audit", async (c) => {
+  const entry = (await c.req.json().catch(() => null)) as Record<string, unknown> | null;
+  if (!entry || typeof entry !== "object") {
+    return c.json({ ok: false, reason: "invalid-entry" }, 400);
+  }
+  try {
+    const { appendFile, mkdir } = await import("node:fs/promises");
+    const { homedir } = await import("node:os");
+    const { dirname, join } = await import("node:path");
+    const auditPath =
+      process.env.POSEIDON_AUDIT_PATH ||
+      join(homedir(), ".poseidon", "audit.jsonl");
+    await mkdir(dirname(auditPath), { recursive: true });
+    await appendFile(
+      auditPath,
+      JSON.stringify({ kind: "ui_audit", ...entry }) + "\n",
+      "utf8",
+    );
+    return c.json({ ok: true });
+  } catch (err) {
+    return c.json({ ok: false, reason: (err as Error).message }, 500);
+  }
+});
+
 // ─── /tool-response ─────────────────────────────────────────────────────
 //
 // Plugin sandbox finished executing a tool. Pass the result back to the

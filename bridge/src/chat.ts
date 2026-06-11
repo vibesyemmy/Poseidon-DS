@@ -37,6 +37,7 @@ import {
   stripMcpPrefix,
   summarizeToolArgs,
 } from "./templateCheck.ts";
+import { dropState } from "./runtime/session-state.ts";
 
 export interface ChatRequest {
   prompt: string;
@@ -149,6 +150,12 @@ export async function handleChat(c: Context, deps: ChatDeps) {
           "mcp__poseidon__capture_screenshot",
           "mcp__poseidon__ask_user",
           "mcp__poseidon__capture_template",
+          // STEP 2 — template-first tool-gate
+          "mcp__poseidon__templates_suggest",
+          "mcp__poseidon__templates_choose",
+          "mcp__poseidon__screen_from_template",
+          "mcp__poseidon__escape_no_template_match",
+          "mcp__poseidon__screen_compose_from_atoms",
         ],
         // Disable built-in Claude Code tools; Poseidon exposes its own.
         tools: [],
@@ -247,6 +254,9 @@ export async function handleChat(c: Context, deps: ChatDeps) {
       });
     } finally {
       unregisterRouter(router.id);
+      // STEP 2 — clear gate state for this stream so the next session
+      // starts at phase='idle' with no carry-over suggestions/choices.
+      dropState(router.id);
     }
   });
 }

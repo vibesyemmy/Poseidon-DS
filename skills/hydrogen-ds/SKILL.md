@@ -50,21 +50,45 @@ Hydrogen has **5 published page-template variant sets** on the `Page template` p
    - "A login / OTP / pre-auth" → **Onboarding**
    - "A settings page" → **Settings**
 2. **Open the family's row in the Registry** (`03-templates.md` → Registry) and read every variant's `Use when` / `Don't use when` line. Pick the one that fits.
-3. **If a variant matches** → instantiate it:
+3. **If a variant matches** → walk the gated path (templates_suggest → templates_choose → screen_from_template):
    ```
-   insert_template({ slug: '<variant-slug>', overrides: { textOverrides: {...} } })
+   // Step A — get ranked candidates (also locks phase='suggested')
+   templates_suggest({ intent: "<short paraphrase>", limit: 5 })
+
+   // Step B — lock the choice (also locks phase='chosen', requires 20+ char reason)
+   templates_choose({ variantKey: "<one from suggest>", reason: "<why it fits>" })
+
+   // Step C — instantiate. Bridge resets phase to 'idle' on success.
+   screen_from_template({ variantKey: "<same as choose>", position?: { x, y } })
    ```
-   The Poseidon implementation of `insert_template` MUST detach the template wrapper after instantiation. The result is a FRAME — atoms inside (Button, Input, Badge, Nav-item, Table item) remain LIBRARY INSTANCES and continue receiving updates.
+   The bridge detaches the template wrapper after instantiation. The result is a FRAME — atoms inside (Button, Input, Badge, Nav-item, Table item) remain LIBRARY INSTANCES and continue receiving updates.
 
    **Why detach the template wrapper:** page templates are *scaffolds*, not contracts. Later edits to a template (e.g. a Header redesign) must NOT silently reshape finished screens. Detaching freezes the layout; atoms still live-update for design-system consistency.
 
-4. **If nothing matches** → **HARD STOP. Do NOT build from atoms automatically.** Call `ask_user` and report:
-   - The intent you parsed from the request.
-   - The 2-3 closest template candidates you considered.
-   - The specific `Use when` / `Don't use when` lines that rejected each.
-   - Then **wait for express instruction** ("compose from atoms" / "add a new variant to family X" / "use template Y anyway with overrides" / "skip the rule for this screen").
+4. **If nothing matches** → **HARD STOP via the gate.** Required tool sequence:
+   ```
+   // Step A — declare no-match with ≥3 considered + ≥40-char rationale.
+   //          Phase moves to 'no_match_declared'. Returns { mustAskUser: true }.
+   escape_no_template_match({
+     intent: "<parsed intent>",
+     considered: [ /* ≥3 variant summaries from templates_suggest output */ ],
+     rationale: "<why none of these fit>"
+   })
 
-   **Never call `emit_recipe` or `modify_node` to fabricate a screen without express instruction after a no-match.**
+   // Step B — ask the designer.
+   ask_user({
+     question: "No published template matched <intent>. Closest considered: <chip summary>. Options: compose from atoms / refine intent / add a new template."
+   })
+
+   // Step C — ONLY if the designer authorizes "compose from atoms":
+   screen_compose_from_atoms({
+     recipe: <emit_recipe tree>,
+     reason: "<short audit reason>",
+     userConfirmation: "<the designer's literal answer from ask_user>"
+   })
+   ```
+
+   **Never call `emit_recipe` or `modify_node` to fabricate a screen on the no-match branch.** The bridge will reject those calls with `TEMPLATE_GATE_VIOLATION`. STEP 2 of ENFORCEMENT.md makes this a deterministic hard stop, not a convention.
 
 ### Registry — 5 families (full Use when / Don't use when lines in `03-templates.md`)
 

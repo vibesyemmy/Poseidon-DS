@@ -24,6 +24,16 @@ import { z } from "zod";
 
 import type { ToolRouter, SandboxToolResult } from "./toolRouter.ts";
 import { listAll as listAllTemplates, saveUser, getBySlug } from "./templates.ts";
+import { rankByIntent, getByVariantKey } from "./runtime/template-index.ts";
+import {
+  setSuggested,
+  setChosen,
+  assertChosenMatching,
+  setNoMatchDeclared,
+  assertNoMatchAndConfirmation,
+  resetIdle,
+  recordUserConfirmation,
+} from "./runtime/template-gate.ts";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const DATA_DIR = resolve(__dirname, "..", "..", "data");
@@ -433,6 +443,154 @@ export function createPoseidonTools(router: ToolRouter) {
         format: z.enum(["PNG", "JPG", "SVG"]).optional().default("PNG"),
       },
       async (input) => dispatchAndPack(router, "capture_screenshot", input),
+    ),
+
+    // ─── STEP 2 — template-first tool-gate ─────────────────────────────
+    // See ENFORCEMENT.md. Five new tools form the gated screen-creation path:
+    //   templates.suggest → templates.choose → screen.from_template
+    //                  └→ escape.no_template_match → ask_user → screen.compose_from_atoms
+
+    tool(
+      "templates_suggest",
+      [
+        "STEP 1 of the template-first gate. Given the designer's intent, return the top-N ranked variants from the published page-template registry (List page · Detail page · Form · Onboarding · Settings) with their Use-when / Don't-use-when lines.",
+        "",
+        "MUST be called before templates_choose. The phase moves to 'suggested' after this call.",
+        "",
+        "Pure read — no canvas mutation.",
+      ].join("\n"),
+      {
+        intent: z.string().min(3).describe("Designer's parsed intent (short paraphrase, e.g. 'transaction list', 'twitter clone')"),
+        limit: z.number().int().min(1).max(10).optional().default(5).describe("Max candidates to return"),
+      },
+      async (input) => {
+        const variants = rankByIntent(input.intent, input.limit ?? 5);
+        setSuggested(router.id, input.intent, variants);
+        return jsonContent({ ok: true, intent: input.intent, variants });
+      },
+    ),
+
+    tool(
+      "templates_choose",
+      [
+        "STEP 2 of the template-first gate. Lock in one of the variants from the most recent templates_suggest result.",
+        "",
+        "Preconditions: phase==='suggested' AND variantKey was in the prior suggestion AND reason.length >= 20.",
+        "On success: phase moves to 'chosen'. Designer can then call screen_from_template with the same key.",
+      ].join("\n"),
+      {
+        variantKey: z.string().describe("variantKey from a templates_suggest result"),
+        reason: z.string().min(20).describe("20+ chars explaining why this variant fits the intent"),
+      },
+      async (input) => {
+        const err = setChosen(router.id, input.variantKey, input.reason);
+        if (err) return { ...jsonContent(err), isError: true };
+        const v = getByVariantKey(input.variantKey)!;
+        return jsonContent({ ok: true, variantKey: v.variantKey, name: v.name, recipeSlug: v.recipeSlug });
+      },
+    ),
+
+    tool(
+      "screen_from_template",
+      [
+        "STEP 3 of the template-first gate. Instantiate the chosen template on the canvas.",
+        "",
+        "Preconditions: phase==='chosen' AND variantKey matches the prior templates_choose.",
+        "On success: delegates to the existing insert_template path; phase resets to 'idle' for the next screen.",
+      ].join("\n"),
+      {
+        variantKey: z.string().describe("variantKey previously locked in via templates_choose"),
+        position: z.object({ x: z.number(), y: z.number() }).optional().describe("Optional position; otherwise auto-placed"),
+      },
+      async (input) => {
+        const err = assertChosenMatching(router.id, input.variantKey);
+        if (err) return { ...jsonContent(err), isError: true };
+        const v = getByVariantKey(input.variantKey)!;
+        const tmpl = await getBySlug(v.recipeSlug);
+        if (!tmpl) {
+          return {
+            ...jsonContent({ ok: false, code: "NOT_FOUND", message: `no template recipe for '${v.recipeSlug}'` }),
+            isError: true,
+          };
+        }
+        // Delegate to existing recipe / stub-frame path.
+        const result = tmpl.recipe
+          ? await dispatchAndPack(router, "emit_recipe", { recipe: tmpl.recipe, position: input.position })
+          : await dispatchAndPack(router, "insert_template", {
+              slug: tmpl.slug,
+              name: tmpl.name,
+              width: tmpl.width,
+              height: tmpl.height,
+              position: input.position,
+            });
+        resetIdle(router.id);
+        return result;
+      },
+    ),
+
+    tool(
+      "escape_no_template_match",
+      [
+        "Declare that the designer's intent does NOT match any published variant. REQUIRED before screen_compose_from_atoms.",
+        "",
+        "Preconditions: considered.length >= 3 (must include the 3 closest considered variants with the Use-when/Don't-use-when lines that rejected each) AND rationale.length >= 40.",
+        "Side effect: phase moves to 'no_match_declared'. After this, you MUST call ask_user to get express designer instruction before any compose call.",
+      ].join("\n"),
+      {
+        intent: z.string().min(3),
+        considered: z
+          .array(
+            z.object({
+              variantKey: z.string(),
+              name: z.string(),
+              family: z.enum(["List", "Detail", "Form", "Onboarding", "Settings"]),
+              useWhen: z.string(),
+              dontUseWhen: z.string(),
+              score: z.number(),
+              recipeSlug: z.string().optional(),
+            }),
+          )
+          .min(3)
+          .describe("At least 3 closest considered variants. Get them from templates_suggest output."),
+        rationale: z.string().min(40).describe("40+ chars explaining why none of the considered variants fit"),
+      },
+      async (input) => {
+        const err = setNoMatchDeclared(
+          router.id,
+          input.intent,
+          input.considered.map((c) => ({ ...c, recipeSlug: c.recipeSlug ?? c.variantKey })) as any,
+          input.rationale,
+        );
+        if (err) return { ...jsonContent(err), isError: true };
+        return jsonContent({ ok: true, ack: true, mustAskUser: true, hint: "Call ask_user next with the intent + considered variants + rejection reasons. Wait for designer's express instruction before any compose call." });
+      },
+    ),
+
+    tool(
+      "screen_compose_from_atoms",
+      [
+        "Compose a screen from atoms (emit_recipe path) AFTER a no-match declaration AND express designer instruction.",
+        "",
+        "Preconditions: phase==='no_match_declared' AND userConfirmation contains the designer's literal answer from a preceding ask_user call.",
+        "Wraps an existing emit_recipe call so the audit log records the override + the designer's approval.",
+      ].join("\n"),
+      {
+        recipe: z.any().describe("Recipe tree (same shape as emit_recipe)"),
+        position: z.object({ x: z.number(), y: z.number() }).optional(),
+        reason: z.string().min(20).describe("Short explanation of why composing was the right move (for audit)"),
+        userConfirmation: z.string().min(4).describe("Designer's literal answer from the preceding ask_user (4+ chars)"),
+      },
+      async (input) => {
+        recordUserConfirmation(router.id, input.userConfirmation);
+        const err = assertNoMatchAndConfirmation(router.id, input.userConfirmation);
+        if (err) return { ...jsonContent(err), isError: true };
+        const result = await dispatchAndPack(router, "emit_recipe", {
+          recipe: input.recipe,
+          position: input.position,
+        });
+        resetIdle(router.id);
+        return result;
+      },
     ),
   ];
 }
